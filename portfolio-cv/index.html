@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-	<title>HomePage</title>
+	<title>Artur</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221128174252">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221130160253">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,160 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="120" data-scroll-show class="header">
 			<div class="header__container">
+
+				<div class="header__menu menu">
+
+					<a class="menu__logo" href="#">Артур</a>
+					<div class="menu__items">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" class="menu__link">Обо мне</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Навыки</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Верстка</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+
+						<div class="menu__buttons">
+							<button id="js-theme-button" class="menu__sun change-theme _icon-lightbulb" type="button"></button>
+							<div class="menu__burger">
+								<button type="button" class="menu__icon icon-menu"><span></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</header>
-		<main class="page">
-			<div class="">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ducimus praesentium placeat deserunt nobis at, quisquam doloribus dolores in voluptate?
-				</p>
-			</div>
+
+		<main data-fp class="page">
+			<section data-fp-section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__heading heading">
+						<h1 class="heading__label">Меня зовут <span>Артур</span></h1>
+						<h2 class="heading__value">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maiores iure accusamus sunt consectetur. Quis, ipsum maxime. Omnis, mollitia laudantium! Deleniti, laborum ab! Maxime odio,
+								inventore velit
+								reiciendis voluptates sequi.
+							</p>
+						</h2>
+					</div>
+			</section>
+
+			<section data-fp-section class="page__portfolio portfolio">
+				<div class="portfolio__container">
+					<div class="portfolio__content">
+						<div class="portfolio__title title">
+							<h2 class="title__label">Последние работы</h2>
+							<h3 class="title__value"></h3>
+						</div>
+
+						<div class="portfolio__items">
+							<div class="portfolio__item">
+								<article class="cards__three cards">
+									<a href="https://prisonbreak8.github.io/create/create-app/" class="cards__picture" target="_blank">
+										<picture><source srcset="img/my-works/createx-preview.webp" type="image/webp"><img src="img/my-works/createx-preview.png" alt="createx corporate website"></picture>
+									</a>
+									<span class="cards__three_rect-1">
+										<span class="shadow-1"></span>
+										<a class="cards__page-link" href="https://prisonbreak8.github.io/create/create-app/" target="_blank">Greatex</a>
+									</span>
+									<span class="cards__three_rect-2">
+										<span class="shadow-2"></span>
+									</span>
+									<span class="cards__three_circle"></span>
+
+									<ul class="cards__lists cards__three_list">
+										<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
+									</ul>
+								</article>
+							</div>
+
+							<div class="portfolio__item">
+								<article class="cards__three cards">
+									<a href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" class="cards__picture" target="_blank">
+										<picture><source srcset="img/my-works/online-zoo-preview.webp" type="image/webp"><img src="img/my-works/online-zoo-preview.png" alt="createx corporate website"></picture>
+									</a>
+									<span class="cards__three_rect-1">
+										<span class="shadow-1"></span>
+										<a class="cards__page-link" href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" target="_blank">Greatex</a>
+									</span>
+									<span class="cards__three_rect-2">
+										<span class="shadow-2"></span>
+									</span>
+									<span class="cards__three_circle"></span>
+
+									<ul class="cards__lists cards__three_list">
+										<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
+									</ul>
+								</article>
+							</div>
+
+							<div class="portfolio__item">
+								<article class="cards__three cards">
+									<a href="https://prisonbreak8.github.io/sushi/" class="cards__picture" target="_blank">
+										<picture><source srcset="img/my-works/sushi-landing-preview.webp" type="image/webp"><img src="img/my-works/sushi-landing-preview.png" alt="createx corporate website"></picture>
+									</a>
+									<span class="cards__three_rect-1">
+										<span class="shadow-1"></span>
+										<a class="cards__page-link" href="https://prisonbreak8.github.io/sushi/" target="_blank">Greatex</a>
+									</span>
+									<span class="cards__three_rect-2">
+										<span class="shadow-2"></span>
+									</span>
+									<span class="cards__three_circle"></span>
+
+									<ul class="cards__lists cards__three_list">
+										<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
+									</ul>
+								</article>
+							</div>
+
+							<div class="portfolio__item">
+								<article class="cards__three cards">
+									<a href="https://prisonbreak8.github.io/headphones/" class="cards__picture" target="_blank">
+										<picture><source srcset="img/my-works/headphones-preview.webp" type="image/webp"><img src="img/my-works/headphones-preview.png" alt="createx corporate website"></picture>
+									</a>
+									<span class="cards__three_rect-1">
+										<span class="shadow-1"></span>
+										<a class="cards__page-link" href="https://prisonbreak8.github.io/headphones/" target="_blank">Greatex</a>
+									</span>
+									<span class="cards__three_rect-2">
+										<span class="shadow-2"></span>
+									</span>
+									<span class="cards__three_circle"></span>
+
+									<ul class="cards__lists cards__three_list">
+										<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
+										<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
+									</ul>
+								</article>
+							</div>
+						</div>
+						<form class="portfolio__page" action="portfolio.html" target="_blank">
+							<button type="submit" class="button button-3d">Открыть портфолио</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
 		</main>
+
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
@@ -40,7 +183,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221128174252"></script>
+	<script src="js/app.min.js?_v=20221130160253"></script>
 </body>
 
 </html>
