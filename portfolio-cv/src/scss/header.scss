@@ -1,9 +1,212 @@
 //====================================================================================================
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	min-width: rem(320);
+	padding: rem(15) 0;
+	//background-color: var(--bgColorHeaderDark);
+	background-color: var(--bgColorHeaderDarkFixed);
+	z-index: $zIndexHeader;
+	&._header-scroll {
+		position: fixed;
+		top: -20%;
+		background-color: var(--bgColorHeaderDarkFixed);
+	}
+	&._header-show {
+		transition: top 0.3s ease 0s;
+		top: 0;
+	}
+	// .header__container
+	&__container {
+	}
+	// .header__menu
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(40);
+
+		@media (min-width: $mobile) {
+			@include adaptiveValue("min-height", 50, 40);
+		}
+	}
+}
+.menu {
+	// .menu__logo
+	&__logo {
+		position: relative;
+		font-size: rem(24);
+		z-index: 10;
+		font-weight: 700;
+		transition: color 0.2s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hoverColorLink);
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			height: 14px;
+			width: 14px;
+			right: -9px;
+			bottom: -4px;
+			border-bottom: 2px solid var(--mainColor);
+			border-right: 2px solid var(--mainColor);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 14px;
+			width: 14px;
+			left: -6px;
+			top: -5px;
+			border-top: 2px solid var(--mainColor);
+			border-left: 2px solid var(--mainColor);
+		}
+	}
+
+	// .menu__items
+	&__items {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 50, 30, 0, 1170, 991);
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $mobile) {
+			position: fixed;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: -120%;
+			@include adaptiveValue("padding-top", 120, 90);
+			padding-bottom: rem(25);
+			padding-right: rem(25);
+			padding-left: rem(25);
+			background-color: var(--bgColorDark); // беграунд всего бургер меню
+			transition: right 0.3s ease-in;
+			&::before {
+				content: ""; // Плашка под которой будет меню проезжать
+				position: fixed;
+				top: 0;
+				right: -120%;
+				width: 100%;
+				height: rem(60);
+				background-color: var(--bgColorHeaderDark);
+				transition: right 0.3s ease-in;
+			}
+			.menu-open & {
+				right: 0;
+				&::before {
+					content: "";
+					right: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		@media (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: rem(30);
+		}
+
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			@include adaptiveValue("column-gap", 60, 25, 0, 1170, 767);
+			row-gap: rem(10);
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		position: relative;
+		font-weight: 600;
+		padding-bottom: rem(2);
+		transition: color 0.2s ease-in;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 2.5px;
+			bottom: -2.5px;
+			left: 0;
+			border-bottom: 2.5px solid var(--hoverColorLink);
+			transition: width 0.2s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hoverColorLink);
+			}
+			&:hover::before {
+				width: 100%;
+			}
+		}
+		@include adaptiveValue("font-size", 18, 16, 0, 1170, 991);
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+	}
+	// .menu__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		column-gap: rem(30);
+	}
+	// .menu__moon
+	&__moon {
+	}
+	// .menu__sun
+	&__sun {
+		z-index: 10;
+		font-size: rem(28);
+		border-radius: 50%;
+		height: rem(20);
+		width: rem(20);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+		animation: pulse-white 2s infinite;
+		@keyframes pulse-white {
+			0% {
+				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+			}
+
+			70% {
+				box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+			}
+
+			100% {
+				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+			}
+		}
+	}
+	// .menu__burger
+	&__burger {
+	}
+	// .menu__icon
+	&__icon {
+	}
+}
+.icon-menu {
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -11,6 +214,7 @@
 		position: relative;
 		width: rem(30);
 		height: rem(18);
+		flex: 0 0 auto;
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
@@ -19,12 +223,12 @@
 		&::before,
 		&::after {
 			content: "";
-			transition: all 0.3s ease 0s;
+			transition: all 0.2s ease 0s;
 			right: 0;
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: var(--mainColor);
 		}
 		&::before {
 			top: 0;
@@ -53,4 +257,3 @@
 		}
 	}
 }
-*/

@@ -22,7 +22,7 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	color: $mainColor;
+	color: var(--mainColor);
 	line-height: 1;
 	font-family: $fontFamily;
 	font-size: $fontSize;

@@ -2,13 +2,46 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
+	display: inline-block;
+	padding: rem(10) rem(22);
+	font-size: rem(22);
+	font-weight: 500;
+	color: var(--mainColor);
 	@media (any-hover: hover) {
 		&:hover {
 		}
 	}
 	&._fw {
 		width: 100%;
+	}
+}
+.button-3d {
+	position: relative;
+	overflow: hidden;
+	background: var(--backgroundGradientButton);
+	border-radius: rem(10);
+	transform: perspective(500px) rotateY(-15deg);
+
+	transition: 0.5s;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: perspective(500px) rotateY(15deg);
+			box-shadow: var(--shadowButtonHover);
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, #fcfaf1, transparent);
+		transition: 0.5s;
+	}
+	@media (any-hover: hover) {
+		&:hover::before {
+			left: 100%;
+		}
 	}
 }

@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['PrisonBreak'] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -30,7 +30,7 @@ flsFunctions.isWebp();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -162,7 +162,7 @@ flsForms.formFieldsInit({
 // Модуль поекранної прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
-// import './libs/fullpage.js'
+import './libs/fullpage.js'
 
 // Модуль паралаксу
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
@@ -178,7 +178,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 
 // Функционал липкого блока
 // flsScroll.stickyBlock();
@@ -204,10 +204,10 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 /* Динамический адаптив */
 // Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+//import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
-// import './libs/wNumb.min.js';
+//import './libs/wNumb.min.js';
 
 // ========================================================================================================================================================================================================================================================
 // Прочее ========================================================================================================================================================================================================================================================
