@@ -2,15 +2,13 @@
 .hero {
 	position: relative;
 	background-color: var(--bgColorDark); /* fallback for old browsers */
-
+	@include adaptiveValue("padding-top", 320, 140);
+	padding-bottom: rem(30);
 	// .hero__container
 	&__container {
-		display: grid;
-		grid-template-columns: 1fr;
-		align-items: center;
-		min-height: 100%;
-		padding-top: rem(100);
-		padding-bottom: rem(30);
+		//display: grid;
+		//grid-template-columns: 1fr;
+		//align-items: center;
 	}
 	// .hero__heading
 	&__heading {
@@ -18,14 +16,13 @@
 }
 //====================================================================================================
 .portfolio {
+	padding-top: rem(10);
+	@include adaptiveValue("padding-bottom", 80, 20);
 	// .portfolio__container
 	&__container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 100%;
-		padding-top: rem(100);
-		padding-bottom: rem(30);
+	}
+	// .portfolio__content
+	&__content {
 	}
 	// .portfolio__title
 	&__title {
@@ -37,6 +34,7 @@
 	// .portfolio__items
 	&__items {
 		display: grid;
+
 		column-gap: rem(20);
 		row-gap: rem(30);
 		&:not(:last-child) {
@@ -55,6 +53,35 @@
 	}
 	// .portfolio__item
 	&__item {
+		position: relative;
+		background-color: var(--bgColorDark);
+		overflow: hidden;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 284px;
+			height: 424px;
+			background: var(--backgroundGradientCardAnimate);
+			transform-origin: bottom right;
+			animation: animate 6s linear infinite;
+			@keyframes animate {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		}
+		&::after {
+			animation-delay: -3s;
+		}
+	}
+	// .portfolio__animate
+	&__animate {
 	}
 	// .portfolio__page
 	&__page {

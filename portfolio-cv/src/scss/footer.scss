@@ -1,3 +1,23 @@
 //====================================================================================================
-
+.footer {
+	background-color: var(--bgColorHeaderDark);
+	padding: rem(20) 0;
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: rem(10);
+	}
+	// .footer__copyright
+	&__copyright {
+		text-align: center;
+	}
+	// .footer__text
+	&__text {
+	}
+}
 //====================================================================================================

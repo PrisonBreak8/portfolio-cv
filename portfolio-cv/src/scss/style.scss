@@ -23,9 +23,6 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 // Основные цвета
 
-$color-box-6: #cd002d;
-$color-box-3: #f4e600;
-$color-box-7: #de8b3e;
 :root {
 	--mainColor: #fcfdff; // Цвет шрифта по умолчанию
 
@@ -38,9 +35,17 @@ $color-box-7: #de8b3e;
 		rgba(0, 0, 0, 0),
 		rgba(0, 0, 0, 0.36) 100%
 	);
-
 	--shadowButtonHover: 0 0 0.3125rem rgba(255, 255, 255, 0.8);
-	--hoverColorLink: #fce122;
+
+	--backgroundGradientCardAnimate: linear-gradient(0deg, transparent, #00ffff, #00ffff);
+
+	--hoverColorLink: #37b6bc;
+	--hoverColorButton: #31adff;
+
+	--colorBox-1: #374765;
+	--colorBox-2: #37b6bc;
+	--colorBox-3: #9dabcf;
+	--colorBox-4: #ffeecb;
 }
 
 $zIndexHeader: 100;
@@ -96,11 +101,17 @@ body {
 }
 
 body.dark-theme {
-	--mainColor: #222326ff; // Цвет шрифта по умолчанию
-	--bgColorDark: #fcfdff;
-	--bgColorHeaderDark: #fcfdff;
-	--bgColorHeaderDarkFixed: #fcfdff; // bg header White theme 	&._header-scroll 	position: fixed;
-	--backgroundGradientButton: linear-gradient(90deg, #3603ff, #a41ee9);
+	--mainColor: #f1f4ff; // Цвет шрифта по умолчанию
+	--bgColorDark: #9eabcf;
+	--bgColorHeaderDark: #6a7799;
+
+	--bgColorHeaderDarkFixed: rgba(106, 119, 153, 0.4); // bg header White theme 	&._header-scroll 	position: fixed;
+	--backgroundGradientButton: linear-gradient(90deg, #424467, #53b9c7);
+
+	--hoverColorLink: #344260;
+	--hoverColorButton: #f05e82;
+
+	--colorBox-4: #ced7f5;
 }
 
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -184,3 +195,4 @@ body.dark-theme {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "portfolio";

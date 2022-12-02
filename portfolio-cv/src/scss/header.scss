@@ -7,8 +7,7 @@
 	width: 100%;
 	min-width: rem(320);
 	padding: rem(15) 0;
-	//background-color: var(--bgColorHeaderDark);
-	background-color: var(--bgColorHeaderDarkFixed);
+	background-color: var(--bgColorHeaderDark);
 	z-index: $zIndexHeader;
 	&._header-scroll {
 		position: fixed;
@@ -28,10 +27,7 @@
 		justify-content: space-between;
 		align-items: center;
 		column-gap: rem(40);
-
-		@media (min-width: $mobile) {
-			@include adaptiveValue("min-height", 50, 40);
-		}
+		min-height: rem(40);
 	}
 }
 .menu {
@@ -41,33 +37,50 @@
 		font-size: rem(24);
 		z-index: 10;
 		font-weight: 700;
-		transition: color 0.2s ease;
+		padding: rem(8) rem(12);
+		transition: all 0.4s;
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--hoverColorLink);
+				background-color: var(--hoverColorLink);
+				box-shadow: 0 0 rem(50) var(--hoverColorLink);
+				transition-delay: 0.4s;
 			}
 		}
-
+		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			height: 14px;
-			width: 14px;
-			right: -9px;
-			bottom: -4px;
-			border-bottom: 2px solid var(--mainColor);
-			border-right: 2px solid var(--mainColor);
+			width: rem(15);
+			height: rem(15);
+			transition: width 0.4s, height 0.4s;
+			transition-delay: 0.4s;
 		}
 
 		&::before {
-			content: "";
-			position: absolute;
-			height: 14px;
-			width: 14px;
-			left: -6px;
-			top: -5px;
-			border-top: 2px solid var(--mainColor);
-			border-left: 2px solid var(--mainColor);
+			top: 0;
+			left: 0;
+			border-top: 2px solid var(--hoverColorLink);
+			border-left: 2px solid var(--hoverColorLink);
+		}
+		&::after {
+			bottom: 0;
+			right: 0;
+			border-bottom: 2px solid var(--hoverColorLink);
+			border-right: 2px solid var(--hoverColorLink);
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
 		}
 	}
 
@@ -86,7 +99,7 @@
 			height: 100%;
 			top: 0;
 			right: -120%;
-			@include adaptiveValue("padding-top", 120, 90);
+			@include adaptiveValue("padding-top", 180, 110);
 			padding-bottom: rem(25);
 			padding-right: rem(25);
 			padding-left: rem(25);
@@ -98,9 +111,10 @@
 				top: 0;
 				right: -120%;
 				width: 100%;
-				height: rem(60);
+				height: rem(76);
 				background-color: var(--bgColorHeaderDark);
 				transition: right 0.3s ease-in;
+				z-index: 10;
 			}
 			.menu-open & {
 				right: 0;
@@ -165,11 +179,12 @@
 	&__buttons {
 		display: flex;
 		align-items: center;
-		column-gap: rem(30);
+
+		@media (max-width: $mobile) {
+			column-gap: rem(30);
+		}
 	}
-	// .menu__moon
-	&__moon {
-	}
+
 	// .menu__sun
 	&__sun {
 		z-index: 10;
@@ -179,6 +194,22 @@
 		width: rem(20);
 		box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
 		animation: pulse-white 2s infinite;
+		transition: color 0.3s ease;
+		&._icon-lightbulb {
+			@media (any-hover: hover) {
+				&:hover {
+					color: #f9f871;
+				}
+			}
+		}
+
+		&._icon-medapps {
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--hoverColorLink);
+				}
+			}
+		}
 		@keyframes pulse-white {
 			0% {
 				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
@@ -202,7 +233,6 @@
 }
 .icon-menu {
 }
-
 //====================================================================================================
 
 //Burger

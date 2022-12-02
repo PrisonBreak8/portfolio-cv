@@ -162,7 +162,7 @@ flsForms.formFieldsInit({
 // Модуль поекранної прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
-import './libs/fullpage.js'
+//import './libs/fullpage.js'
 
 // Модуль паралаксу
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
