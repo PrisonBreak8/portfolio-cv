@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221202193414">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221207110114">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +19,12 @@
 
 				<div class="header__menu menu">
 
-					<a class="menu__logo" href="index.html"><span>Артур</span></a>
+					<h1><a class="menu__logo" href="index.html"><span>Артур</span></a></h1>
 					<div class="menu__items">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="#" class="menu__link">Обо мне</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Навыки</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Верстка</a></li>
+								<li class="menu__item"><a data-goto=".hero" href="#" class="menu__link">Обо мне</a></li>
+								<li class="menu__item"><a data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
 								<li class="menu__item"><a data-goto-header data-goto=".portfolio" href="#" class="menu__link">Портфолио</a></li>
 								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
 							</ul>
@@ -58,7 +57,7 @@
 					</div>
 
 					<div class="portfolio__items">
-						<div class="portfolio__item corporate">
+						<div data-watch class="portfolio__item portfolio__item_page corporate">
 							<article class="cards__three cards">
 								<a href="https://prisonbreak8.github.io/create/create-app/" class="cards__picture" target="_blank">
 									<picture><source srcset="img/my-works/createx-preview.webp" type="image/webp"><img src="img/my-works/createx-preview.png" alt="createx corporate website"></picture>
@@ -81,7 +80,7 @@
 							</article>
 						</div>
 
-						<div class="portfolio__item internet-shop">
+						<div data-watch class="portfolio__item portfolio__item_page internet-shop">
 							<article class="cards__three cards">
 								<a href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" class="cards__picture" target="_blank">
 									<picture><source srcset="img/my-works/online-zoo-preview.webp" type="image/webp"><img src="img/my-works/online-zoo-preview.png" alt="createx corporate website"></picture>
@@ -104,7 +103,7 @@
 							</article>
 						</div>
 
-						<div class="portfolio__item landing">
+						<div data-watch class="portfolio__item portfolio__item_page landing">
 							<article class="cards__three cards">
 								<a href="https://prisonbreak8.github.io/sushi/" class="cards__picture" target="_blank">
 									<picture><source srcset="img/my-works/sushi-landing-preview.webp" type="image/webp"><img src="img/my-works/sushi-landing-preview.png" alt="createx corporate website"></picture>
@@ -127,7 +126,7 @@
 							</article>
 						</div>
 
-						<div class="portfolio__item landing">
+						<div data-watch class="portfolio__item portfolio__item_page landing">
 							<article class="cards__three cards">
 								<a href="https://prisonbreak8.github.io/headphones/" class="cards__picture" target="_blank">
 									<picture><source srcset="img/my-works/headphones-preview.webp" type="image/webp"><img src="img/my-works/headphones-preview.png" alt="createx corporate website"></picture>
@@ -149,7 +148,6 @@
 								</ul>
 							</article>
 						</div>
-
 					</div>
 
 				</div>
@@ -175,7 +173,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221202193414"></script>
+	<script src="js/app.min.js?_v=20221207110114"></script>
 </body>
 
 </html>
