@@ -195,13 +195,13 @@
 		border-radius: 50%;
 		height: rem(20);
 		width: rem(20);
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+		box-shadow: 0 0 0 0 rgba(250, 255, 17, 1);
 		animation: pulse-white 2s infinite;
 		transition: color 0.3s ease;
 		&._icon-lightbulb {
 			@media (any-hover: hover) {
 				&:hover {
-					color: #f9f871;
+					color: var(--hoverColorLink);
 				}
 			}
 		}
@@ -215,15 +215,15 @@
 		}
 		@keyframes pulse-white {
 			0% {
-				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+				box-shadow: 0 0 0 0 rgba(250, 255, 17, 0.7);
 			}
 
 			70% {
-				box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+				box-shadow: 0 0 0 10px rgba(250, 255, 17, 0);
 			}
 
 			100% {
-				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+				box-shadow: 0 0 0 0 rgba(250, 255, 17, 0);
 			}
 		}
 	}

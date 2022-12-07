@@ -17,43 +17,96 @@
 }
 //========================================================================================================================================================
 .heading {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	@include adaptiveValue("row-gap", 50, 30);
 	// .heading__label
 	&__label {
-		font-weight: 700;
-		@include adaptiveValue("font-size", 48, 36);
-		text-align: center;
-		.my-name-animation {
-			overflow: hidden;
-			background: linear-gradient(90deg, white, white, white);
-			background-size: 80%;
-			background-repeat: no-repeat;
-			animation: my-name-shining 4s ease-in-out infinite;
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: rgba(255, 255, 255, 0.7);
-			text-fill-color: rgba(255, 255, 255, 0.7);
-			@keyframes my-name-shining {
-				0% {
-					background-position: -10em;
-				}
-				100% {
-					background-position: 10em;
-				}
-			}
-		}
 	}
 	// .heading__value
 	&__value {
+	}
+	// .heading__sub-text
+	&__sub-text {
+		position: relative;
 		@include adaptiveValue("font-size", 26, 20);
 		line-height: math.div(34, 26);
-		max-width: rem(900);
-		text-align: center;
-		font-weight: 500;
+		font-family: Nunito;
+		padding-left: rem(20);
+		opacity: 0.7;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(18);
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<p>";
+			left: 4px;
+			top: -23px;
+		}
+		&::after {
+			content: "</p>";
+			left: -6px;
+			margin-top: 40px;
+		}
 	}
+}
+.label {
+	font-weight: 700;
+
+	@include adaptiveValue("margin-left", 30, 15);
+	@include adaptiveValue("font-size", 100, 40);
+	span {
+		margin-left: -30px;
+		@media (max-width: $tablet) {
+			margin-left: -24px;
+		}
+		@media (max-width: $mobile) {
+			margin-left: -15px;
+		}
+	}
+	// .label__pop
+	&__pop {
+		display: inline-block;
+		@keyframes rubberBand {
+			0% {
+				transform: scale3d(1, 1, 1);
+			}
+			30% {
+				transform: scale3d(1.25, 0.75, 1);
+			}
+			40% {
+				transform: scale3d(0.75, 1.25, 1);
+			}
+			50% {
+				transform: scale3d(1.15, 0.85, 1);
+			}
+			65% {
+				transform: scale3d(0.95, 1.05, 1);
+			}
+			75% {
+				transform: scale3d(1.05, 0.95, 1);
+			}
+			100% {
+				transform: scale3d(1, 1, 1);
+			}
+		}
+		// .label__pop_mr
+		&_mr {
+			margin-right: 20px;
+		}
+		// .label__pop_red
+		&_red {
+			color: var(--hoverColorLink);
+			&.rubberBand {
+				color: var(--pointerrColorText);
+			}
+		}
+	}
+}
+.rubberBand {
+	animation: rubberBand 1s ease-in-out;
+	color: var(--pointerrColorText);
 }
 //========================================================================================================================================================
 .title {
@@ -81,42 +134,45 @@
 		position: relative;
 		inset: 2px;
 		z-index: 10;
-		&:hover {
-			.cards__three_rect-1 {
-				left: 10%;
 
-				.shadow-1 {
-					left: -20%;
-				}
-			}
+		@media (any-hover: hover) {
+			&:hover {
+				.cards__three_rect-1 {
+					left: 10%;
 
-			.cards__three_rect-2 {
-				left: 60%;
-
-				&:before {
-					left: -100%;
+					.shadow-1 {
+						left: -20%;
+					}
 				}
 
-				&:after {
-					left: 80%;
+				.cards__three_rect-2 {
+					left: 60%;
+
+					&:before {
+						left: -100%;
+					}
+
+					&:after {
+						left: 80%;
+					}
+
+					.shadow-2 {
+						left: -10%;
+					}
 				}
 
-				.shadow-2 {
-					left: -10%;
+				.cards__three_circle {
+					transform: scale(1);
+
+					&:before {
+						transform: scale(0.9);
+					}
 				}
-			}
 
-			.cards__three_circle {
-				transform: scale(1);
-
-				&:before {
-					transform: scale(0.9);
-				}
-			}
-
-			.cards__three_list {
-				li {
-					transform: translateX(0);
+				.cards__three_list {
+					li {
+						transform: translateX(0);
+					}
 				}
 			}
 		}
@@ -353,5 +409,28 @@
 			}
 		}
 	}
+}
+//========================================================================================================================================================
+.test__container {
+	padding: 100px 0;
+}
+.text {
+	transform: translate(150%, 0);
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+._watcher-view .text {
+	transition: all 0.2s ease 0.2s;
+	transform: translate(0, 0);
+}
+.canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//background-color: red;
+	overflow: hidden;
 }
 //========================================================================================================================================================

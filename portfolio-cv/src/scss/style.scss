@@ -18,7 +18,10 @@
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
-$fontFamily: "Poppins", sans-serif;
+
+$fontFamily: "Inter", sans-serif;
+//$fontFamily: "La Belle Aurore", cursive;
+//$fontFamily: "Nunito", sans-serif;
 $fontSize: rem(14); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
@@ -26,9 +29,9 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 :root {
 	--mainColor: #fcfdff; // Цвет шрифта по умолчанию
 
-	--bgColorDark: #434444ff; // bg Dark Body theme
-	--bgColorHeaderDark: #37383b; // bg header Dark theme
-	--bgColorHeaderDarkFixed: rgba(55, 56, 59, 0.4); // bg header Dark theme 	&._header-scroll 	position: fixed;
+	--bgColorDark: #1d1d1dff; // bg Dark Body theme
+	--bgColorHeaderDark: #181818ff; // bg header Dark theme
+	--bgColorHeaderDarkFixed: rgba(24, 24, 24, 0.4); // bg header Dark theme 	&._header-scroll 	position: fixed;
 
 	--backgroundGradientButton: radial-gradient(
 		30% 90% ellipse at bottom center,
@@ -39,7 +42,8 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 	--backgroundGradientCardAnimate: linear-gradient(0deg, transparent, #00ffff, #00ffff);
 
-	--hoverColorLink: #37b6bc;
+	--hoverColorLink: #ff5753ff;
+	--pointerrColorText: #faff11ff;
 	--hoverColorButton: #31adff;
 
 	--colorBox-1: #374765;

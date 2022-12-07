@@ -45,3 +45,58 @@
 		}
 	}
 }
+//========================================================================================================================================================
+.block-btn {
+	// .block-btn__link
+	&__link {
+		position: relative;
+		font-size: 18px;
+		z-index: 10;
+		padding: rem(15) rem(55);
+		letter-spacing: 4px;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--hoverColorLink);
+				box-shadow: 0 0 rem(50) var(--hoverColorLink);
+				transition-delay: 0.4s;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(25);
+			height: rem(25);
+			transition: width 0.4s, height 0.4s;
+			transition-delay: 0.4s;
+		}
+		&::before {
+			top: 0;
+			left: 0;
+			border-top: 2px solid var(--hoverColorLink);
+			border-left: 2px solid var(--hoverColorLink);
+		}
+		&::after {
+			bottom: 0;
+			right: 0;
+			border-bottom: 2px solid var(--hoverColorLink);
+			border-right: 2px solid var(--hoverColorLink);
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+	}
+}
+//========================================================================================================================================================

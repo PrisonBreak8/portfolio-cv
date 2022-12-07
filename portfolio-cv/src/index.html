@@ -5,24 +5,71 @@
 })
 
 <body>
+
+
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 
 		<main class="page">
 
-			<section data-fullscreen class="page__hero hero">
+			<section data-fullscreen data-watch="navigator" class="page__hero hero">
 				<div class="hero__container">
-					<div class="hero__heading heading">
-						<h1 class="heading__label">Меня зовут<span class="my-name-animation"> Артур</span></h1>
-						<h2 class="heading__value">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maiores iure accusamus sunt consectetur. Quis, ipsum maxime. Omnis, mollitia laudantium! Deleniti, laborum ab! Maxime odio,
-								inventore velit
-								reiciendis voluptates sequi.
-							</p>
-						</h2>
+					<div class="hero__body">
+
+						<div class="hero__heading heading">
+							<h2 class="heading__label label">
+								<span class="label__pop">П</span>
+								<span class="label__pop">р</span>
+								<span class="label__pop">и</span>
+								<span class="label__pop">в</span>
+								<span class="label__pop">е</span>
+								<span class="label__pop">т</span>
+								<span class="label__pop">!</span>
+								<br>
+								<span class="label__pop label__pop_mr">Я</span>
+
+								<span class="label__pop label__pop_red">А</span>
+								<span class="label__pop label__pop_red">р</span>
+								<span class="label__pop label__pop_red">т</span>
+								<span class="label__pop label__pop_red">у</span>
+								<span class="label__pop label__pop_red">р</span>
+								<span class="label__pop label__pop_red label__pop_mr">,</span>
+								<br>
+								<span class="label__pop">w</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop label__pop_mr">b</span>
+								<span class="label__pop">d</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">v</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">l</span>
+								<span class="label__pop">o</span>
+								<span class="label__pop">p</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">r</span>
+							</h2>
+							<div class="heading__value">
+								<p class="heading__sub-text">
+									Front End Developer
+								</p>
+							</div>
+						</div>
+
+						<div class="block-btn">
+							<a class="block-btn__link" href="#">Контакты</a>
+						</div>
+
 					</div>
 			</section>
+
+			<!--<section data-watch="navigator" class="page__skills skills">
+				<div class="skills__container">
+					<div class="portfolio__title title">
+						<h2 class="title__label"><span class="title-animation">Навыки</span></h2>
+						<h3 class="title__value">Технологии</h3>
+					</div>
+				</div>
+			</section>-->
 
 			<section data-watch="navigator" class="page__portfolio portfolio">
 				<div class="portfolio__container">
@@ -132,11 +179,39 @@
 				</div>
 			</section>
 
+
+
+			<section data-watch="navigator" class="test">
+				<div class="test__container">
+
+
+					<div class="text" style="transition-duration: .2s;">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem reprehenderit voluptate suscipit earum, recusandae molestias porro fugit perferendis et consequuntur vitae
+						placeat assumenda illum dignissimos? Eum omnis sint optio voluptate modi saepe dolorum rem nemo architecto corrupti eos, aperiam repudiandae blanditiis dignissimos nam perspiciatis ad explicabo
+						accusantium tenetur fugit reprehenderit repellendus repellat. Quae, pariatur neque? Temporibus eligendi aliquam numquam magni beatae illo a consequuntur nam incidunt! Ut, facere dolore. Aspernatur
+					</div>
+
+					<div class="text" style="transition-duration: .4s;">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem reprehenderit voluptate suscipit earum, recusandae molestias porro fugit perferendis et consequuntur vitae
+						placeat assumenda illum dignissimos? Eum omnis sint optio voluptate modi saepe dolorum rem nemo architecto corrupti eos, aperiam repudiandae blanditiis dignissimos nam perspiciatis ad explicabo
+						accusantium tenetur fugit reprehenderit repellendus repellat. Quae, pariatur neque? Temporibus eligendi aliquam numquam magni beatae illo a consequuntur nam incidunt! Ut, facere dolore. Aspernatur
+					</div>
+
+					<div class="text" style="transition-duration: .6s;">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem reprehenderit voluptate suscipit earum, recusandae molestias porro fugit perferendis et consequuntur vitae
+						placeat assumenda illum dignissimos? Eum omnis sint optio voluptate modi saepe dolorum rem nemo architecto corrupti eos, aperiam repudiandae blanditiis dignissimos nam perspiciatis ad explicabo
+						accusantium tenetur fugit reprehenderit repellendus repellat. Quae, pariatur neque? Temporibus eligendi aliquam numquam magni beatae illo a consequuntur nam incidunt! Ut, facere dolore. Aspernatur
+					</div>
+
+				</div>
+			</section>
+
 		</main>
 
 		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 	@@include('html/_js.htm',{})
 </body>
 
