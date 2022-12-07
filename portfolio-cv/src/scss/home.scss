@@ -4,7 +4,7 @@
 	background-color: var(--bgColorDark); /* fallback for old browsers */
 	@include adaptiveValue("padding-top", 180, 140);
 	padding-bottom: rem(30);
-	margin-bottom: rem(40);
+	margin-bottom: rem(100);
 	// .hero__container
 	&__container {
 		position: relative;
@@ -25,7 +25,6 @@
 		&::after {
 			content: "<body>";
 			top: -13%;
-
 			left: 32px;
 		}
 	}
@@ -71,32 +70,52 @@
 	&__sub-text {
 	}
 }
-
 //====================================================================================================
 .portfolio {
 	padding-top: rem(10);
-	@include adaptiveValue("padding-bottom", 80, 20);
+	@include adaptiveValue("margin-bottom", 80, 20);
 	// .portfolio__container
 	&__container {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(20);
+
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<section>";
+			top: -44px;
+			left: 10px;
+			@media (max-width: $mobileSmall) {
+				top: -40px;
+			}
+		}
+		&::after {
+			content: "</section>";
+			bottom: -70px;
+			left: 18px;
+		}
 	}
 	// .portfolio__content
 	&__content {
 	}
 	// .portfolio__title
 	&__title {
-		text-align: center;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 20);
+			@include adaptiveValue("margin-bottom", 80, 45);
 		}
 	}
 	// .portfolio__items
 	&__items {
 		display: grid;
-
 		column-gap: rem(20);
 		row-gap: rem(30);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 40, 20);
+			@include adaptiveValue("margin-bottom", 80, 45);
 		}
 
 		@media (min-width: $mobileSmall) {
@@ -105,41 +124,9 @@
 		@media (min-width: $mobile) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@media (min-width: em(991)) {
-			grid-template-columns: repeat(4, 1fr);
-		}
 	}
 	// .portfolio__item
 	&__item {
-		position: relative;
-		background-color: var(--bgColorDark);
-		overflow: hidden;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: -50%;
-			left: -50%;
-			width: 284px;
-			height: 424px;
-			background: var(--backgroundGradientCardAnimate);
-			transform-origin: bottom right;
-			animation: animate 6s linear infinite;
-			@keyframes animate {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-		}
-		&::after {
-			animation-delay: -3s;
-		}
-	}
-	// .portfolio__animate
-	&__animate {
 	}
 	// .portfolio__page
 	&__page {
@@ -148,4 +135,48 @@
 		justify-content: center;
 	}
 }
+.title {
+	// .title__label
+	&__label {
+	}
+	// .title__value
+	&__value {
+	}
+}
+.label {
+	// .label__pop
+	&__pop {
+		// .label__pop_mr
+		&_mr {
+		}
+	}
+}
+
+.block-btn {
+	// .block-btn__link
+	&__link {
+	}
+}
+
 //========================================================================================================================================================
+.page {
+	// .page__skills
+	&__skills {
+	}
+}
+.skills {
+	// .skills__container
+	&__container {
+	}
+	// .skills__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .skills__canvas
+	&__canvas {
+	}
+}
