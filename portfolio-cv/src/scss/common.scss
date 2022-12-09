@@ -4,6 +4,9 @@
 	// .page__hero
 	&__hero {
 	}
+	// .page__about-me
+	&__about-me {
+	}
 	// .page__portfolio
 	&__portfolio {
 	}
@@ -53,9 +56,10 @@
 }
 .label {
 	font-weight: 700;
-
 	@include adaptiveValue("margin-left", 30, 15);
 	@include adaptiveValue("font-size", 100, 40);
+	// .label_fz
+
 	span {
 		margin-left: -30px;
 		@media (max-width: $tablet) {
@@ -118,7 +122,11 @@
 		@include adaptiveValue("font-size", 70, 44);
 		@include adaptiveValue("margin-left", 13, 13);
 		font-weight: 600;
-		color: var(--hoverColorLink);
+
+		// .title__label_red
+		&_red {
+			color: var(--hoverColorLink);
+		}
 		._watcher-view & {
 			transition: opacity 1.5s ease 0.3s;
 			opacity: 1;
