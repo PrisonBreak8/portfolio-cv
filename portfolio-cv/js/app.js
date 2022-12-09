@@ -732,6 +732,13 @@
                 rubAnim[i].classList.remove("rubberBand");
             }), 1e3);
         }));
+        const root = document.documentElement;
+        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+        const marqueeContent = document.querySelector("ul.marquee-content");
+        if (marqueeContent) {
+            root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+            for (let i = 0; i < marqueeElementsDisplayed; i++) marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+        }
         window["PrisonBreak"] = true;
         isWebp();
         menuInit();

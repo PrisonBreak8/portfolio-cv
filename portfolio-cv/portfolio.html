@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221207190405">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221209195147">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 					<div class="menu__items">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a data-goto=".hero" href="#" class="menu__link">Обо мне</a></li>
+								<li class="menu__item"><a data-goto=".about-me" href="#" class="menu__link">Обо мне</a></li>
 								<li class="menu__item"><a data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
 								<li class="menu__item"><a data-goto-header data-goto=".portfolio" href="#" class="menu__link">Портфолио</a></li>
 								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
@@ -57,99 +57,85 @@
 					</div>
 
 					<div class="portfolio__items">
-						<div data-watch class="portfolio__item portfolio__item_page corporate">
-							<article class="cards__three cards">
-								<a href="https://prisonbreak8.github.io/create/create-app/" class="cards__picture" target="_blank">
-									<picture><source srcset="img/my-works/createx-preview.webp" type="image/webp"><img src="img/my-works/createx-preview.png" alt="createx corporate website"></picture>
-								</a>
-								<span class="cards__three_rect-1">
-									<span class="shadow-1"></span>
-									<a class="cards__page-link" href="https://prisonbreak8.github.io/create/create-app/" target="_blank"><span>Greatex</span></a>
-								</span>
-								<span class="cards__three_rect-2">
-									<span class="shadow-2"></span>
-								</span>
-								<span class="cards__three_circle"></span>
 
-								<ul class="cards__lists cards__three_list">
-									<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
-								</ul>
-							</article>
+						<div data-watch class="portfolio__item portfolio__item_page corporate">
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/createx-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/createx-preview.png" alt="createx corporate website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Greatex</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/create/create-app/" target="_blank"></a>
+							</figure>
 						</div>
 
 						<div data-watch class="portfolio__item portfolio__item_page internet-shop">
-							<article class="cards__three cards">
-								<a href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" class="cards__picture" target="_blank">
-									<picture><source srcset="img/my-works/online-zoo-preview.webp" type="image/webp"><img src="img/my-works/online-zoo-preview.png" alt="createx corporate website"></picture>
-								</a>
-								<span class="cards__three_rect-1">
-									<span class="shadow-1"></span>
-									<a class="cards__page-link" href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" target="_blank"><span>Online-zoo</span></a>
-								</span>
-								<span class="cards__three_rect-2">
-									<span class="shadow-2"></span>
-								</span>
-								<span class="cards__three_circle"></span>
-
-								<ul class="cards__lists cards__three_list">
-									<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
-								</ul>
-							</article>
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/online-zoo-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/online-zoo-preview.png" alt="online zoo magazine website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Online Zoo</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" target="_blank"></a>
+							</figure>
 						</div>
 
 						<div data-watch class="portfolio__item portfolio__item_page landing">
-							<article class="cards__three cards">
-								<a href="https://prisonbreak8.github.io/sushi/" class="cards__picture" target="_blank">
-									<picture><source srcset="img/my-works/sushi-landing-preview.webp" type="image/webp"><img src="img/my-works/sushi-landing-preview.png" alt="createx corporate website"></picture>
-								</a>
-								<span class="cards__three_rect-1">
-									<span class="shadow-1"></span>
-									<a class="cards__page-link" href="https://prisonbreak8.github.io/sushi/" target="_blank"><span>Sushi</span></a>
-								</span>
-								<span class="cards__three_rect-2">
-									<span class="shadow-2"></span>
-								</span>
-								<span class="cards__three_circle"></span>
-
-								<ul class="cards__lists cards__three_list">
-									<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
-								</ul>
-							</article>
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/sushi-landing-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/sushi-landing-preview.png" alt="sushi landing website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Sushi</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/sushi/" target="_blank"></a>
+							</figure>
 						</div>
 
 						<div data-watch class="portfolio__item portfolio__item_page landing">
-							<article class="cards__three cards">
-								<a href="https://prisonbreak8.github.io/headphones/" class="cards__picture" target="_blank">
-									<picture><source srcset="img/my-works/headphones-preview.webp" type="image/webp"><img src="img/my-works/headphones-preview.png" alt="createx corporate website"></picture>
-								</a>
-								<span class="cards__three_rect-1">
-									<span class="shadow-1"></span>
-									<a class="cards__page-link" href="https://prisonbreak8.github.io/headphones/" target="_blank"><span>Headphones</span></a>
-								</span>
-								<span class="cards__three_rect-2">
-									<span class="shadow-2"></span>
-								</span>
-								<span class="cards__three_circle"></span>
-
-								<ul class="cards__lists cards__three_list">
-									<li class="cards__list"><a class="cards__social _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-linkedin-in" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-telegram-plane" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
-									<li class="cards__list"><a class="cards__social _icon-facebook-f" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
-								</ul>
-							</article>
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/landing-portfolio-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/landing-portfolio-preview.png" alt="portfolio landing website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Landing</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/sushi/" target="_blank"></a>
+							</figure>
 						</div>
+
+						<div data-watch class="portfolio__item portfolio__item_page landing">
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/perfume-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/perfume-preview.png" alt="perfume landing website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Perfume</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/perfume/" target="_blank"></a>
+							</figure>
+						</div>
+
+						<div data-watch class="portfolio__item portfolio__item_page landing">
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/headphones-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/headphones-preview.png" alt="headphones landing website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Headphones</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/headphones/" target="_blank"></a>
+							</figure>
+						</div>
+
+						<div data-watch class="portfolio__item portfolio__item_page landing">
+							<figure class="portfolio-card">
+								<picture><source srcset="img/my-works/car-website-preview.webp" type="image/webp"><img class="portfolio-card__picture" src="img/my-works/car-website-preview.png" alt="car website landing website"></picture>
+								<figcaption class="portfolio-card__figcaption">
+									<h3 class="portfolio-card__description">Car website</h3>
+									<h5 class="portfolio-card__sub-description">Design</h5>
+								</figcaption>
+								<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/car_website/" target="_blank"></a>
+							</figure>
+						</div>
+
 					</div>
-
 				</div>
 			</section>
 		</main>
@@ -173,7 +159,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221207190405"></script>
+	<script src="js/app.min.js?_v=20221209195147"></script>
 </body>
 
 </html>
