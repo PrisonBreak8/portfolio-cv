@@ -111,7 +111,7 @@ if (rubAnim) {
 //=========== Marquee  like Content Scrolling =============================================================================================================================================
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.marquee-content");
+const marqueeContent = document.querySelector("ul.marquee__content");
 if (marqueeContent) {
 
 

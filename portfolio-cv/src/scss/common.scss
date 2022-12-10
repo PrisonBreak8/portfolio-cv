@@ -7,6 +7,9 @@
 	// .page__about-me
 	&__about-me {
 	}
+	// .page__skills
+	&__skills {
+	}
 	// .page__portfolio
 	&__portfolio {
 	}
@@ -58,8 +61,6 @@
 	font-weight: 700;
 	@include adaptiveValue("margin-left", 30, 15);
 	@include adaptiveValue("font-size", 100, 40);
-	// .label_fz
-
 	span {
 		margin-left: -30px;
 		@media (max-width: $tablet) {
@@ -120,9 +121,14 @@
 		display: inline-block;
 		opacity: 0;
 		@include adaptiveValue("font-size", 70, 44);
-		@include adaptiveValue("margin-left", 13, 13);
+		margin-left: 13px;
 		font-weight: 600;
-
+		span {
+			margin-left: -17px;
+			@media (max-width: $tablet) {
+				margin-left: -15px;
+			}
+		}
 		// .title__label_red
 		&_red {
 			color: var(--hoverColorLink);
@@ -131,12 +137,7 @@
 			transition: opacity 1.5s ease 0.3s;
 			opacity: 1;
 		}
-		span {
-			margin-left: -17px;
-			@media (max-width: $tablet) {
-				margin-left: -15px;
-			}
-		}
+
 		&::before,
 		&::after {
 			content: "";
@@ -278,6 +279,76 @@
 	}
 }
 //========================================================================================================================================================
+:root {
+	--marquee-width: 100%;
+	--marquee-height: 70px;
+	--marquee-elements-displayed: 5;
+	--marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+	--marquee-animation-duration: calc(var(--marquee-elements) * 2.5s);
+}
+.marquee {
+	position: relative;
+	overflow: hidden;
+	width: var(--marquee-width);
+	height: var(--marquee-height);
+	color: var(--mainColor);
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		height: 100%;
+		z-index: 1;
+		width: rem(160);
+	}
+	&::before {
+		content: "";
+		left: 0;
+		background: linear-gradient(to right, var(--bgColorDark) 10%, transparent 100%);
+	}
+	&::after {
+		content: "";
+		right: 0;
+		background: linear-gradient(to left, var(--bgColorDark) 10%, transparent 100%);
+	}
+	// .marquee__content
+	&__content {
+		height: 100%;
+		display: flex;
+		animation: scrolling var(--marquee-animation-duration) linear infinite;
+	}
+	// .marquee__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		width: var(--marquee-element-width);
+		max-height: 100%;
+		@include adaptiveValue("font-size", 40, 30);
+		white-space: nowrap;
+	}
+	@keyframes scrolling {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+		}
+	}
+}
+@media (max-width: $mobile) {
+	:root {
+		--marquee-elements-displayed: 4;
+	}
+}
+@media (max-width: $mobileSmall) {
+	:root {
+		--marquee-elements-displayed: 3;
+	}
+}
+//========================================================================================================================================================
+
 .test__container {
 	padding: 100px 0;
 }

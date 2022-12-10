@@ -125,75 +125,24 @@
 	}
 }
 //====================================================================================================
-:root {
-	--marquee-width: 100%;
-	--marquee-height: 70px;
-	--marquee-elements-displayed: 5;
-	--marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-	--marquee-animation-duration: calc(var(--marquee-elements) * 2.5s);
-}
-
-.marquee {
+.skills {
 	position: relative;
-	overflow: hidden;
-	width: var(--marquee-width);
-	height: var(--marquee-height);
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 40);
 
-	color: var(--mainColor);
-}
-.marquee:before,
-.marquee:after {
-	position: absolute;
-	content: "";
-	top: 0;
-	height: 100%;
-	z-index: 1;
-	width: rem(160);
-}
-.marquee::before {
-	left: 0;
-	background: linear-gradient(to right, var(--bgColorDark) 10%, transparent 100%);
-}
-.marquee::after {
-	right: 0;
-	background: linear-gradient(to left, var(--bgColorDark) 10%, transparent 100%);
-}
-.marquee-content {
-	height: 100%;
-	display: flex;
-	animation: scrolling var(--marquee-animation-duration) linear infinite;
-}
-
-@keyframes scrolling {
-	0% {
-		transform: translateX(0);
+	// .skills__container
+	&__container {
 	}
-	100% {
-		transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+	// .skills__title
+	&__title {
+	}
+	// .skills__body
+	&__body {
+	}
+	// .skills__marquee
+	&__marquee {
 	}
 }
-.marquee-content li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: 0;
-	width: var(--marquee-element-width);
-	max-height: 100%;
-	@include adaptiveValue("font-size", 40, 30);
-	white-space: nowrap;
-}
-@media (max-width: $mobile) {
-	:root {
-		--marquee-elements-displayed: 4;
-	}
-}
-
-@media (max-width: $mobileSmall) {
-	:root {
-		--marquee-elements-displayed: 3;
-	}
-}
-
 //========================================================================================================================================================
 .portfolio {
 	padding-top: rem(10);
