@@ -14,178 +14,384 @@
 		display: block;
 	}
 }
-
 ._icon-angle-down:before {
 	content: "\e900";
 }
 ._icon-arrow-right:before {
 	content: "\e901";
 }
-._icon-chevron-right:before {
-	content: "\e902";
-}
-._icon-chrome:before {
+
+._icon-bem .path2:before {
 	content: "\e903";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
 }
-._icon-css3:before {
+._icon-bem .path3:before {
 	content: "\e904";
+	margin-left: -1em;
+	color: rgb(146, 148, 150);
 }
-._icon-css3-alt:before {
+._icon-bem .path4:before {
 	content: "\e905";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
 }
-._icon-discord:before {
+._icon-bem .path5:before {
 	content: "\e906";
+	margin-left: -1em;
+	color: rgb(0, 0, 0);
 }
-._icon-earlybirds:before {
+._icon-bem .path6:before {
 	content: "\e907";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
 }
-._icon-edge:before {
+._icon-chevron-right:before {
 	content: "\e908";
 }
-._icon-edge-legacy:before {
+._icon-chrome:before {
 	content: "\e909";
 }
-._icon-eye:before {
+._icon-css3:before {
 	content: "\e90a";
 }
-._icon-eye-slash:before {
+._icon-css3-alt:before {
 	content: "\e90b";
 }
-._icon-facebook:before {
+._icon-discord:before {
 	content: "\e90c";
 }
-._icon-facebook-f:before {
+._icon-earlybirds:before {
 	content: "\e90d";
 }
-._icon-facebook-messenger:before {
+._icon-edge:before {
 	content: "\e90e";
 }
-._icon-figma:before {
+._icon-edge-legacy:before {
 	content: "\e90f";
 }
-._icon-folder:before {
+._icon-eye:before {
 	content: "\e910";
 }
-._icon-folder-open:before {
+._icon-eye-slash:before {
 	content: "\e911";
 }
-._icon-font-awesome-logo-full:before {
+._icon-facebook:before {
 	content: "\e912";
 }
-._icon-github:before {
+._icon-facebook-f:before {
 	content: "\e913";
 }
-._icon-github-square:before {
+._icon-facebook-messenger:before {
 	content: "\e914";
 }
-._icon-gitkraken:before {
+._icon-figma:before {
 	content: "\e915";
 }
-._icon-git-square:before {
+._icon-folder:before {
 	content: "\e916";
 }
-._icon-google:before {
+._icon-folder-open:before {
 	content: "\e917";
 }
-._icon-google-drive:before {
+._icon-font-awesome-logo-full:before {
 	content: "\e918";
 }
-._icon-gulp:before {
+._icon-github:before {
 	content: "\e919";
 }
-._icon-heart:before {
+._icon-github-square:before {
 	content: "\e91a";
 }
-._icon-html5:before {
+._icon-gitkraken:before {
 	content: "\e91b";
 }
-._icon-instagram:before {
+._icon-git-square:before {
 	content: "\e91c";
 }
-._icon-instagram-square:before {
+._icon-google:before {
 	content: "\e91d";
 }
-._icon-js:before {
+._icon-google-drive:before {
 	content: "\e91e";
 }
-._icon-js-square:before {
+._icon-greensock:before {
 	content: "\e91f";
 }
-._icon-keyboard:before {
+._icon-gulp:before {
 	content: "\e920";
 }
-._icon-lightbulb:before {
+._icon-heart:before {
 	content: "\e921";
 }
-._icon-linkedin:before {
+._icon-html5:before {
 	content: "\e922";
 }
-._icon-linkedin-in:before {
+._icon-instagram:before {
 	content: "\e923";
 }
-._icon-linux:before {
+._icon-instagram-square:before {
 	content: "\e924";
 }
-._icon-medapps:before {
+._icon-js:before {
 	content: "\e925";
 }
-._icon-moon:before {
+._icon-js-square:before {
 	content: "\e926";
 }
-._icon-node:before {
+._icon-keyboard:before {
 	content: "\e927";
 }
-._icon-npm:before {
+._icon-lightbulb:before {
 	content: "\e928";
 }
-._icon-paper-plane:before {
+._icon-linkedin:before {
 	content: "\e929";
 }
-._icon-php:before {
+._icon-linkedin-in:before {
 	content: "\e92a";
 }
-._icon-react:before {
+._icon-linux:before {
 	content: "\e92b";
 }
-._icon-reacteurope:before {
+._icon-medapps:before {
 	content: "\e92c";
 }
-._icon-sass:before {
+._icon-moon:before {
 	content: "\e92d";
 }
-._icon-sun:before {
+._icon-node:before {
 	content: "\e92e";
 }
-._icon-telegram:before {
+._icon-npm:before {
 	content: "\e92f";
 }
-._icon-telegram-plane:before {
+._icon-paper-plane:before {
 	content: "\e930";
 }
-._icon-tumblr:before {
+._icon-php:before {
 	content: "\e931";
 }
-._icon-twitter:before {
+._icon-react:before {
 	content: "\e932";
 }
-._icon-twitter-square:before {
+._icon-reacteurope:before {
 	content: "\e933";
 }
-._icon-user:before {
+._icon-sass:before {
 	content: "\e934";
 }
-._icon-viber:before {
+._icon-sun:before {
 	content: "\e935";
 }
-._icon-whatsapp:before {
+._icon-telegram:before {
 	content: "\e936";
 }
-._icon-whatsapp-square:before {
+._icon-telegram-plane:before {
 	content: "\e937";
 }
-._icon-youtube:before {
+._icon-tumblr:before {
 	content: "\e938";
 }
-._icon-youtube-square:before {
+._icon-twitter:before {
 	content: "\e939";
 }
+._icon-twitter-square:before {
+	content: "\e93a";
+}
+._icon-user:before {
+	content: "\e93b";
+}
+._icon-viber:before {
+	content: "\e93c";
+}
+._icon-webpack:before {
+	content: "\e93d";
+}
+._icon-whatsapp:before {
+	content: "\e93e";
+}
+._icon-whatsapp-square:before {
+	content: "\e93f";
+}
+._icon-youtube:before {
+	content: "\e940";
+}
+._icon-youtube-square:before {
+	content: "\e941";
+}
+
+//._icon-angle-down:before {
+//	content: "\e900";
+//}
+//._icon-arrow-right:before {
+//	content: "\e901";
+//}
+//._icon-chevron-right:before {
+//	content: "\e902";
+//}
+//._icon-chrome:before {
+//	content: "\e903";
+//}
+//._icon-css3:before {
+//	content: "\e904";
+//}
+//._icon-css3-alt:before {
+//	content: "\e905";
+//}
+//._icon-discord:before {
+//	content: "\e906";
+//}
+//._icon-earlybirds:before {
+//	content: "\e907";
+//}
+//._icon-edge:before {
+//	content: "\e908";
+//}
+//._icon-edge-legacy:before {
+//	content: "\e909";
+//}
+//._icon-eye:before {
+//	content: "\e90a";
+//}
+//._icon-eye-slash:before {
+//	content: "\e90b";
+//}
+//._icon-facebook:before {
+//	content: "\e90c";
+//}
+//._icon-facebook-f:before {
+//	content: "\e90d";
+//}
+//._icon-facebook-messenger:before {
+//	content: "\e90e";
+//}
+//._icon-figma:before {
+//	content: "\e90f";
+//}
+//._icon-folder:before {
+//	content: "\e910";
+//}
+//._icon-folder-open:before {
+//	content: "\e911";
+//}
+//._icon-font-awesome-logo-full:before {
+//	content: "\e912";
+//}
+//._icon-github:before {
+//	content: "\e913";
+//}
+//._icon-github-square:before {
+//	content: "\e914";
+//}
+//._icon-gitkraken:before {
+//	content: "\e915";
+//}
+//._icon-git-square:before {
+//	content: "\e916";
+//}
+//._icon-google:before {
+//	content: "\e917";
+//}
+//._icon-google-drive:before {
+//	content: "\e918";
+//}
+//._icon-gulp:before {
+//	content: "\e919";
+//}
+//._icon-heart:before {
+//	content: "\e91a";
+//}
+//._icon-html5:before {
+//	content: "\e91b";
+//}
+//._icon-instagram:before {
+//	content: "\e91c";
+//}
+//._icon-instagram-square:before {
+//	content: "\e91d";
+//}
+//._icon-js:before {
+//	content: "\e91e";
+//}
+//._icon-js-square:before {
+//	content: "\e91f";
+//}
+//._icon-keyboard:before {
+//	content: "\e920";
+//}
+//._icon-lightbulb:before {
+//	content: "\e921";
+//}
+//._icon-linkedin:before {
+//	content: "\e922";
+//}
+//._icon-linkedin-in:before {
+//	content: "\e923";
+//}
+//._icon-linux:before {
+//	content: "\e924";
+//}
+//._icon-medapps:before {
+//	content: "\e925";
+//}
+//._icon-moon:before {
+//	content: "\e926";
+//}
+//._icon-node:before {
+//	content: "\e927";
+//}
+//._icon-npm:before {
+//	content: "\e928";
+//}
+//._icon-paper-plane:before {
+//	content: "\e929";
+//}
+//._icon-php:before {
+//	content: "\e92a";
+//}
+//._icon-react:before {
+//	content: "\e92b";
+//}
+//._icon-reacteurope:before {
+//	content: "\e92c";
+//}
+//._icon-sass:before {
+//	content: "\e92d";
+//}
+//._icon-sun:before {
+//	content: "\e92e";
+//}
+//._icon-telegram:before {
+//	content: "\e92f";
+//}
+//._icon-telegram-plane:before {
+//	content: "\e930";
+//}
+//._icon-tumblr:before {
+//	content: "\e931";
+//}
+//._icon-twitter:before {
+//	content: "\e932";
+//}
+//._icon-twitter-square:before {
+//	content: "\e933";
+//}
+//._icon-user:before {
+//	content: "\e934";
+//}
+//._icon-viber:before {
+//	content: "\e935";
+//}
+//._icon-whatsapp:before {
+//	content: "\e936";
+//}
+//._icon-whatsapp-square:before {
+//	content: "\e937";
+//}
+//._icon-youtube:before {
+//	content: "\e938";
+//}
+//._icon-youtube-square:before {
+//	content: "\e939";
+//}

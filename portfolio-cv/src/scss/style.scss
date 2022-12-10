@@ -33,6 +33,7 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 	--bgColorHeaderDark: #181818ff; // bg header Dark theme
 	--bgColorHeaderDarkFixed: rgba(24, 24, 24, 0.4); // bg header Dark theme 	&._header-scroll 	position: fixed;
 
+	--boxShadowCards: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
 	--backgroundGradientButton: radial-gradient(
 		30% 90% ellipse at bottom center,
 		rgba(0, 0, 0, 0),
@@ -44,7 +45,7 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 	--hoverColorLink: #ff5753ff;
 	--pointerrColorText: #faff11ff;
-	--hoverColorButton: #31adff;
+	--hoverColorButton: #08fdd8ff;
 }
 
 $zIndexHeader: 100;
@@ -108,7 +109,7 @@ body.dark-theme {
 	--backgroundGradientButton: linear-gradient(90deg, #424467, #53b9c7);
 
 	--hoverColorLink: #344260;
-	--hoverColorButton: #f05e82;
+	--hoverColorButton: #3e4b6a;
 
 	--colorBox-4: #ced7f5;
 }

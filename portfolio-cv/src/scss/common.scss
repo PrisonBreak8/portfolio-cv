@@ -292,6 +292,9 @@
 	width: var(--marquee-width);
 	height: var(--marquee-height);
 	color: var(--mainColor);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
 	&::before,
 	&::after {
 		content: "";
@@ -348,7 +351,115 @@
 	}
 }
 //========================================================================================================================================================
+.skills-bar {
+	width: 100%;
+	color: var(--mainColor);
+	// .skills-bar__lists
+	&__lists {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 15);
+		}
+	}
+	// .skills-bar__list
+	&__list {
+		text-transform: uppercase;
+		margin-bottom: rem(10);
+	}
+}
+.bar {
+	background-color: var(--bgColorDark);
+	display: block;
+	height: 2px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px var(--hoverColorButton);
+	span {
+		height: 2px;
+		float: left;
+		display: flex;
+		align-items: center;
+		background-color: var(--hoverColorButton);
+	}
+}
 
+.html {
+	width: 93%;
+	&._watcher-view {
+		animation: html 2s ease 0.2s;
+	}
+}
+.scss {
+	width: 85%;
+	&._watcher-view {
+		animation: scss 2s ease 0.2s;
+	}
+}
+.javascript {
+	width: 60%;
+	&._watcher-view {
+		animation: javascript 2s ease 0.2s;
+	}
+}
+.flexbox {
+	width: 80%;
+	&._watcher-view {
+		animation: flexbox 2s ease 0.2s;
+	}
+}
+.grid {
+	width: 75%;
+	&._watcher-view {
+		animation: grid 2s ease 0.2s;
+	}
+}
+@keyframes html {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 93%;
+	}
+}
+
+@keyframes scss {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 85%;
+	}
+}
+
+@keyframes javascript {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 60%;
+	}
+}
+
+@keyframes flexbox {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 75%;
+	}
+}
+@keyframes grid {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 93%;
+	}
+}
+//========================================================================================================================================================
 .test__container {
 	padding: 100px 0;
 }
