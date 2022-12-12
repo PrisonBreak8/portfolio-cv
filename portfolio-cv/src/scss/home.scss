@@ -3,8 +3,7 @@
 	position: relative;
 	background-color: var(--bgColorDark); /* fallback for old browsers */
 	@include adaptiveValue("padding-top", 180, 140);
-	padding-bottom: rem(30);
-	@include adaptiveValue("margin-bottom", 130, 20);
+	@include adaptiveValue("margin-bottom", 160, 40);
 	// .hero__container
 	&__container {
 		position: relative;
@@ -73,7 +72,9 @@
 //========================================================================================================================================================
 .about-me {
 	position: relative;
-	padding-bottom: rem(40);
+	@include adaptiveValue("padding-top", 80, 40);
+	@include adaptiveValue("margin-bottom", 180, 40);
+
 	// .about-me__container
 	&__container {
 		position: relative;
@@ -188,10 +189,32 @@
 //====================================================================================================
 .skills {
 	position: relative;
-	@include adaptiveValue("padding-top", 100, 40);
-	@include adaptiveValue("padding-bottom", 100, 40);
+	@include adaptiveValue("padding-top", 60, 40);
+	@include adaptiveValue("padding-bottom", 160, 40);
 	// .skills__container
 	&__container {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(20);
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<section>";
+			top: -44px;
+			left: 10px;
+			@media (max-width: $mobileSmall) {
+				top: -40px;
+			}
+		}
+		&::after {
+			content: "</section>";
+			bottom: -70px;
+			left: 18px;
+		}
 	}
 	// .skills__title
 	&__title {
@@ -309,7 +332,8 @@
 }
 //========================================================================================================================================================
 .portfolio {
-	padding-top: rem(20);
+	@include adaptiveValue("padding-top", 60, 40);
+	//@include adaptiveValue("padding-bottom", 160, 40);
 	@include adaptiveValue("margin-bottom", 80, 20);
 	// .portfolio__container
 	&__container {
