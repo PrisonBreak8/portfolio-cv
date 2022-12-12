@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221210205435">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221212111732">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +23,10 @@
 					<div class="menu__items">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a data-goto=".about-me" href="#" class="menu__link">Обо мне</a></li>
-								<li class="menu__item"><a data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".about-me" href="#" class="menu__link">Обо мне</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
 								<li class="menu__item"><a data-goto-header data-goto=".portfolio" href="#" class="menu__link">Портфолио</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+								<li class="menu__item"><a data-goto-header href="#" data-goto=".contacts" class="menu__link">Контакты</a></li>
 							</ul>
 						</nav>
 
@@ -45,7 +45,7 @@
 		</header>
 
 		<main class="page">
-			<section data-watch="navigator" class="page__all-portfolio all-portfolio portfolio">
+			<section data-watch="navigator" class="page__all-portfolio all-portfolio">
 				<div class="all-portfolio__container">
 
 
@@ -161,7 +161,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221210205435"></script>
+	<script src="js/app.min.js?_v=20221212111732"></script>
 </body>
 
 </html>

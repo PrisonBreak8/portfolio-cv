@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221210205435">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221212111732">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +25,10 @@
 					<div class="menu__items">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a data-goto=".about-me" href="#" class="menu__link">Обо мне</a></li>
-								<li class="menu__item"><a data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".about-me" href="#" class="menu__link">Обо мне</a></li>
+								<li class="menu__item"><a data-goto-header data-goto=".skills" href="#" class="menu__link">Навыки</a></li>
 								<li class="menu__item"><a data-goto-header data-goto=".portfolio" href="#" class="menu__link">Портфолио</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+								<li class="menu__item"><a data-goto-header href="#" data-goto=".contacts" class="menu__link">Контакты</a></li>
 							</ul>
 						</nav>
 
@@ -98,7 +98,7 @@
 					</div>
 			</section>
 
-			<section data-watch="navigator" class="page__about-me about-me">
+			<section data-watch-threshold="0.2" data-watch="navigator" class="page__about-me about-me">
 				<div class="about-me__container">
 
 					<div class="about-me__title title">
@@ -163,7 +163,7 @@
 				</div>
 			</section>
 
-			<section data-watch="navigator" class="page__skills skills">
+			<section data-watch-threshold="0.3" data-watch="navigator" class="page__skills skills">
 				<div class="skills__container">
 					<div class="skills__title title">
 						<h3 class="title__label">
@@ -190,7 +190,7 @@
 						<h3 class="title__value"></h3>
 					</div>
 
-					<div class="skills__marquee marquee">
+					<div data-watch class="skills__marquee marquee">
 						<ul class="marquee__content">
 							<li class="marquee__list _icon-css3"></li>
 							<li class="marquee__list _icon-figma"></li>
@@ -288,7 +288,7 @@
 				</div>
 			</section>
 
-			<section data-watch="navigator" class="page__portfolio portfolio">
+			<section data-watch-threshold="0.2" data-watch="navigator" class="page__portfolio portfolio">
 				<div class="portfolio__container">
 					<div class="portfolio__content">
 
@@ -394,12 +394,11 @@
 				</div>
 			</section>
 
-			<!-- 
 			<section data-watch="navigator" class="page__contacts contacts">
 				<div class="contacts__container">
 					<div class="contacts__body">
 
-						<div class="portfolio__title title">
+						<div class="contacts__title title">
 							<h3 class="title__label">
 								<span class="label__pop">К</span>
 								<span class="label__pop">о</span>
@@ -416,7 +415,7 @@
 					</div>
 				</div>
 			</section>
- -->
+
 			<!-- 
 			<section data-watch="navigator" class="test">
 				<div class="test__container">
@@ -464,8 +463,8 @@
 		</div>
 	</div>
 </div> -->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js?_v=20221210205435"></script>-->
-	<script src="js/app.min.js?_v=20221210205435"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js?_v=20221212111732"></script>-->
+	<script src="js/app.min.js?_v=20221212111732"></script>
 </body>
 
 </html>
