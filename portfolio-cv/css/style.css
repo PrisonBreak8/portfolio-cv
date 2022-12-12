@@ -1974,6 +1974,10 @@ body.dark-theme {
   color: var(--hoverColorLink);
 }
 
+.contacts__title:not(:last-child) {
+  margin-bottom: 3.75em;
+}
+
 .all-portfolio__container {
   position: relative;
 }
