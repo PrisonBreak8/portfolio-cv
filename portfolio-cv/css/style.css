@@ -1472,7 +1472,6 @@ body.dark-theme {
   position: relative;
   background-color: var(--bgColorDark);
   /* fallback for old browsers */
-  padding-bottom: 1.875rem;
 }
 
 .hero__container {
@@ -1539,7 +1538,6 @@ body.dark-theme {
 
 .about-me {
   position: relative;
-  padding-bottom: 2.5rem;
 }
 
 .about-me__container {
@@ -1667,6 +1665,31 @@ body.dark-theme {
   position: relative;
 }
 
+.skills__container {
+  position: relative;
+}
+
+.skills__container::before,
+.skills__container::after {
+  content: "";
+  position: absolute;
+  font-family: "LaBelleAurore", cursive;
+  font-size: 1.25rem;
+  opacity: 0.3;
+}
+
+.skills__container::before {
+  content: "<section>";
+  top: -44px;
+  left: 10px;
+}
+
+.skills__container::after {
+  content: "</section>";
+  bottom: -70px;
+  left: 18px;
+}
+
 .skills__card {
   display: -ms-grid;
   display: grid;
@@ -1784,10 +1807,6 @@ body.dark-theme {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.625rem;
-}
-
-.portfolio {
-  padding-top: 1.25rem;
 }
 
 .portfolio__container {
@@ -2147,7 +2166,7 @@ body.dark-theme {
   }
 
   .hero {
-    margin-bottom: 8.125rem;
+    margin-bottom: 10rem;
   }
 
   .heading__label::after {
@@ -2158,20 +2177,32 @@ body.dark-theme {
     margin-top: 6.25rem;
   }
 
+  .about-me {
+    padding-top: 5rem;
+  }
+
+  .about-me {
+    margin-bottom: 11.25rem;
+  }
+
   .about-me__title:not(:last-child) {
     margin-bottom: 3.75rem;
   }
 
   .skills {
-    padding-top: 6.25rem;
+    padding-top: 3.75rem;
   }
 
   .skills {
-    padding-bottom: 6.25rem;
+    padding-bottom: 10rem;
   }
 
   .skills__title:not(:last-child) {
     margin-bottom: 4.375rem;
+  }
+
+  .portfolio {
+    padding-top: 3.75rem;
   }
 
   .portfolio {
@@ -2245,7 +2276,7 @@ body.dark-theme {
   }
 
   .hero {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 
   .heading__label::after {
@@ -2254,6 +2285,14 @@ body.dark-theme {
 
   .heading__label::after {
     margin-top: 2.5rem;
+  }
+
+  .about-me {
+    padding-top: 2.5rem;
+  }
+
+  .about-me {
+    margin-bottom: 2.5rem;
   }
 
   .about-me__title:not(:last-child) {
@@ -2270,6 +2309,10 @@ body.dark-theme {
 
   .skills__title:not(:last-child) {
     margin-bottom: 2.1875rem;
+  }
+
+  .portfolio {
+    padding-top: 2.5rem;
   }
 
   .portfolio {
@@ -2501,6 +2544,10 @@ body.dark-theme {
     top: -40px;
   }
 
+  .skills__container::before {
+    top: -40px;
+  }
+
   .portfolio__container::before {
     top: -40px;
   }
@@ -2610,15 +2657,15 @@ body.dark-theme {
     }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , -1.25rem  +  12.5vw , 8.125rem )) {
+@supports (margin-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem )) {
     .hero {
-      margin-bottom: clamp( 1.25rem , -1.25rem  +  12.5vw , 8.125rem );
+      margin-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , -1.25rem  +  12.5vw , 8.125rem )) {
+@supports not (margin-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem )) {
     .hero {
-      margin-bottom: calc(1.25rem + 6.875 * (100vw - 20rem) / 55);
+      margin-bottom: calc(2.5rem + 7.5 * (100vw - 20rem) / 55);
     }
 }
 
@@ -2646,6 +2693,30 @@ body.dark-theme {
     }
 }
 
+@supports (padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .about-me {
+      padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
+    .about-me {
+      padding-top: calc(2.5rem + 2.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (margin-bottom: clamp( 2.5rem , -0.6818181818rem  +  15.9090909091vw , 11.25rem )) {
+    .about-me {
+      margin-bottom: clamp( 2.5rem , -0.6818181818rem  +  15.9090909091vw , 11.25rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2.5rem , -0.6818181818rem  +  15.9090909091vw , 11.25rem )) {
+    .about-me {
+      margin-bottom: calc(2.5rem + 8.75 * (100vw - 20rem) / 55);
+    }
+}
+
 @supports (margin-bottom: clamp( 2.8125rem , 2.4715909091rem  +  1.7045454545vw , 3.75rem )) {
     .about-me__title:not(:last-child) {
       margin-bottom: clamp( 2.8125rem , 2.4715909091rem  +  1.7045454545vw , 3.75rem );
@@ -2658,27 +2729,27 @@ body.dark-theme {
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
+@supports (padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem )) {
     .skills {
-      padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem );
+      padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
+@supports not (padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem )) {
     .skills {
-      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 55);
+      padding-top: calc(2.5rem + 1.25 * (100vw - 20rem) / 55);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
+@supports (padding-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem )) {
     .skills {
-      padding-bottom: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem );
+      padding-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 1.1363636364rem  +  6.8181818182vw , 6.25rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , -0.2272727273rem  +  13.6363636364vw , 10rem )) {
     .skills {
-      padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 55);
+      padding-bottom: calc(2.5rem + 7.5 * (100vw - 20rem) / 55);
     }
 }
 
@@ -2691,6 +2762,18 @@ body.dark-theme {
 @supports not (margin-bottom: clamp( 2.1875rem , 1.3920454545rem  +  3.9772727273vw , 4.375rem )) {
     .skills__title:not(:last-child) {
       margin-bottom: calc(2.1875rem + 2.1875 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem )) {
+    .portfolio {
+      padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 2.0454545455rem  +  2.2727272727vw , 3.75rem )) {
+    .portfolio {
+      padding-top: calc(2.5rem + 1.25 * (100vw - 20rem) / 55);
     }
 }
 
