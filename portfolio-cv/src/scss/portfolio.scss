@@ -1,6 +1,7 @@
 //========================================================================================================================================================
 .all-portfolio {
 	@include adaptiveValue("padding-top", 180, 120);
+	@include adaptiveValue("padding-bottom", 120, 60);
 	// .all-portfolio__container
 	&__container {
 		position: relative;

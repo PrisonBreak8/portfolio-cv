@@ -73,10 +73,31 @@
 //========================================================================================================================================================
 .about-me {
 	position: relative;
-	padding-top: rem(20);
-	@include adaptiveValue("padding-bottom", 100, 20);
+	padding-bottom: rem(40);
 	// .about-me__container
 	&__container {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(20);
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<section>";
+			top: -44px;
+			left: 10px;
+			@media (max-width: $mobileSmall) {
+				top: -40px;
+			}
+		}
+		&::after {
+			content: "</section>";
+			bottom: -70px;
+			left: 18px;
+		}
 	}
 	// .about-me__title
 	&__title {
@@ -97,6 +118,25 @@
 	}
 	// .about-me__description
 	&__description {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(18);
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<p>";
+			left: 4px;
+			top: -23px;
+		}
+		&::after {
+			content: "</p>";
+			left: -6px;
+			margin-top: rem(5);
+		}
 	}
 	// .about-me__heading
 	&__heading {
@@ -269,7 +309,7 @@
 }
 //========================================================================================================================================================
 .portfolio {
-	padding-top: rem(10);
+	padding-top: rem(20);
 	@include adaptiveValue("margin-bottom", 80, 20);
 	// .portfolio__container
 	&__container {
@@ -316,14 +356,34 @@
 
 	// .portfolio__title
 	&__title {
+		margin-top: 20px;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 80, 45);
 		}
 	}
 	// .portfolio__description
 	&__description {
+		position: relative;
 		opacity: 0;
 		@include adaptiveValue("font-size", 16, 12);
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			font-family: "LaBelleAurore", cursive;
+			font-size: rem(18);
+			opacity: 0.3;
+		}
+		&::before {
+			content: "<p>";
+			left: 4px;
+			top: -23px;
+		}
+		&::after {
+			content: "</p>";
+			left: 3px;
+			margin-top: rem(5);
+		}
 		._watcher-view & {
 			transition: opacity 1.5s ease 0.5s;
 			opacity: 1;
@@ -400,27 +460,17 @@
 .portfolio-link {
 	color: var(--hoverColorLink);
 }
-
-.block-btn {
-	// .block-btn__link
-	&__link {
-	}
-}
-.portfolio-card {
-	// .portfolio-card__picture
-	&__picture {
-	}
-	// .portfolio-card__figcaption
-	&__figcaption {
-	}
-	// .portfolio-card__description
-	&__description {
-	}
-	// .portfolio-card__sub-description
-	&__sub-description {
-	}
-	// .portfolio-card__link-work
-	&__link-work {
-	}
-}
 //========================================================================================================================================================
+.contacts {
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 40);
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__body
+	&__body {
+	}
+	// .contacts__title
+	&__title {
+	}
+}
