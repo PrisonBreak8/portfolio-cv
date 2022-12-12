@@ -333,7 +333,6 @@
 //========================================================================================================================================================
 .portfolio {
 	@include adaptiveValue("padding-top", 60, 80);
-	//@include adaptiveValue("padding-bottom", 160, 40);
 	@include adaptiveValue("margin-bottom", 80, 20);
 	// .portfolio__container
 	&__container {
@@ -496,5 +495,8 @@
 	}
 	// .contacts__title
 	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(60);
+		}
 	}
 }
