@@ -73,7 +73,7 @@
 .about-me {
 	position: relative;
 	@include adaptiveValue("padding-top", 80, 40);
-	@include adaptiveValue("margin-bottom", 180, 40);
+	@include adaptiveValue("margin-bottom", 180, 80);
 
 	// .about-me__container
 	&__container {
@@ -189,7 +189,7 @@
 //====================================================================================================
 .skills {
 	position: relative;
-	@include adaptiveValue("padding-top", 60, 40);
+	padding-top: rem(60);
 	@include adaptiveValue("padding-bottom", 160, 40);
 	// .skills__container
 	&__container {
@@ -332,7 +332,7 @@
 }
 //========================================================================================================================================================
 .portfolio {
-	@include adaptiveValue("padding-top", 60, 40);
+	@include adaptiveValue("padding-top", 60, 80);
 	//@include adaptiveValue("padding-bottom", 160, 40);
 	@include adaptiveValue("margin-bottom", 80, 20);
 	// .portfolio__container
