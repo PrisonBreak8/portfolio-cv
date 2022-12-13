@@ -101,17 +101,18 @@ body {
 }
 
 body.dark-theme {
-	--mainColor: #f1f4ff; // Цвет шрифта по умолчанию
-	--bgColorDark: #9eabcf;
-	--bgColorHeaderDark: #6a7799;
+	--mainColor: #1e1926; // Цвет шрифта по умолчанию
+	--bgColorDark: #fff7ee;
+	--bgColorHeaderDark: #fff7ec;
+	--bgColorHeaderDarkFixed: rgba(255, 247, 236, 0.4); // bg header White theme 	&._header-scroll 	position: fixed;
 
-	--bgColorHeaderDarkFixed: rgba(106, 119, 153, 0.4); // bg header White theme 	&._header-scroll 	position: fixed;
-	--backgroundGradientButton: linear-gradient(90deg, #424467, #53b9c7);
+	--hoverColorLink: #ff8c00;
+	--pointerrColorText: #9c001b;
+	--hoverColorButton: #000dc2;
 
-	--hoverColorLink: #344260;
-	--hoverColorButton: #3e4b6a;
-
-	--colorBox-4: #ced7f5;
+	--boxShadowCards: 0 2px 4px -1px rgba(97, 97, 238, 0.2), 0 4px 5px 0 rgba(196, 109, 191, 0.14),
+		0 1px 10px 0 rgba(159, 159, 204, 0.12);
+	--colorBox-4: #798897;
 }
 
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================

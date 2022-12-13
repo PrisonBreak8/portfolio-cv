@@ -15,13 +15,31 @@
 		}
 		&::before {
 			content: "<html>";
-			top: -9%;
+			top: -90px;
 			left: 5px;
+			@media (max-width: $tablet) {
+				top: -75px;
+			}
+			@media (max-width: $mobile) {
+				top: -55px;
+			}
+			@media (max-width: $mobileSmall) {
+				top: -40px;
+			}
 		}
 		&::after {
 			content: "<body>";
-			top: -7%;
+			top: -65px;
 			left: 32px;
+			@media (max-width: $tablet) {
+				top: -55px;
+			}
+			@media (max-width: $mobile) {
+				top: -35px;
+			}
+			@media (max-width: $mobileSmall) {
+				top: -20px;
+			}
 		}
 	}
 }
