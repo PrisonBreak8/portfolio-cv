@@ -1342,6 +1342,7 @@ video {
 }
 
 .menu__sun {
+  position: relative;
   z-index: 10;
   font-size: 1.75rem;
   border-radius: 50%;
