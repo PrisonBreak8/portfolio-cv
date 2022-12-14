@@ -4,10 +4,12 @@
 	background-color: var(--bgColorDark); /* fallback for old browsers */
 	@include adaptiveValue("padding-top", 180, 140);
 	@include adaptiveValue("margin-bottom", 160, 40);
+
 	// .hero__container
 	&__container {
 		position: relative;
 		z-index: 10;
+
 		&::before,
 		&::after {
 			content: "";
@@ -32,6 +34,7 @@
 	}
 	// .hero__heading
 	&__heading {
+		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
 		row-gap: rem(30);

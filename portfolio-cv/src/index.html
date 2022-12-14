@@ -6,9 +6,16 @@
 
 <body>
 
-
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
+
+		<div class="block-loader">
+			<div class="loader">
+				<div class="loader__item"></div>
+				<div class="loader__item"></div>
+				<div class="loader__item"></div>
+			</div>
+		</div>
 
 		<main class="page">
 
@@ -60,6 +67,7 @@
 						</div>
 
 					</div>
+				</div>
 			</section>
 
 			<section data-watch="navigator" class="page__about-me about-me">
@@ -434,7 +442,6 @@
 		@@include('html/_footer.htm',{})
 
 	</div>
-
 
 	@@include('html/_popup.htm',{})
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>-->
