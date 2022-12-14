@@ -478,33 +478,31 @@ video {
 	object-fit: cover;
 }
 //========================================================================================================================================================
-.block-loader {
+.loader {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-
 	background-color: var(--bgColorDark);
-	opacity: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	visibility: visible;
 	z-index: 1000;
-	transition: visibility 0.8s ease 0.8s, opacity 0.8s ease 0.8s;
+	opacity: 0;
+	transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
 	.loaded & {
-		opacity: 0;
+		opacity: 1;
 		visibility: hidden;
 	}
-}
-
-.loader {
-	width: rem(180);
-	height: rem(180);
-	border-radius: 50%;
-	perspective: 800px;
-
+	// .loader__block
+	&__block {
+		width: rem(180);
+		height: rem(180);
+		border-radius: 50%;
+		perspective: 800px;
+	}
 	// .loader__item
 	&__item {
 		position: absolute;
@@ -526,23 +524,24 @@ video {
 			transform: rotateX(35deg) rotateY(55deg);
 			animation: rotateThree 1s linear infinite;
 		}
-	}
-	@keyframes rotateOne {
-		to {
-			transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+		@keyframes rotateOne {
+			to {
+				transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+			}
 		}
-	}
-	@keyframes rotateTwo {
-		to {
-			transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+		@keyframes rotateTwo {
+			to {
+				transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+			}
 		}
-	}
-	@keyframes rotateThree {
-		to {
-			transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+		@keyframes rotateThree {
+			to {
+				transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+			}
 		}
 	}
 }
+
 //========================================================================================================================================================
 ::-webkit-scrollbar {
 	width: 0.6rem;
