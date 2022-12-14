@@ -490,10 +490,8 @@ video {
 	align-items: center;
 	visibility: visible;
 	z-index: 1000;
-	opacity: 0;
-	transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
+	transition: visibility 0.9s;
 	.loaded & {
-		opacity: 1;
 		visibility: hidden;
 	}
 	// .loader__block
