@@ -1217,14 +1217,13 @@ video {
      object-fit: cover;
 }
 
-.block-loader {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--bgColorDark);
-  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1236,17 +1235,18 @@ video {
           align-items: center;
   visibility: visible;
   z-index: 1000;
-  -webkit-transition: visibility 0.8s ease 0.8s, opacity 0.8s ease 0.8s;
-  -o-transition: visibility 0.8s ease 0.8s, opacity 0.8s ease 0.8s;
-  transition: visibility 0.8s ease 0.8s, opacity 0.8s ease 0.8s;
+  opacity: 0;
+  -webkit-transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
+  -o-transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
+  transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
 }
 
-.loaded .block-loader {
-  opacity: 0;
+.loaded .loader {
+  opacity: 1;
   visibility: hidden;
 }
 
-.loader {
+.loader__block {
   width: 11.25rem;
   height: 11.25rem;
   border-radius: 50%;
@@ -1483,6 +1483,8 @@ video {
   z-index: 10;
   font-size: 1.75rem;
   border-radius: 50%;
+  height: 1.875rem;
+  width: 1.875rem;
   -webkit-box-shadow: 0 0 0 0 rgb(250, 255, 17);
           box-shadow: 0 0 0 0 rgb(250, 255, 17);
   -webkit-animation: pulse-white 2s infinite;
