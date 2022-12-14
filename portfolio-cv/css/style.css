@@ -1235,14 +1235,12 @@ video {
           align-items: center;
   visibility: visible;
   z-index: 1000;
-  opacity: 0;
-  -webkit-transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
-  -o-transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
-  transition: visibility 1.2s ease 0s, opacity 0s ease 0s;
+  -webkit-transition: visibility 0.9s;
+  -o-transition: visibility 0.9s;
+  transition: visibility 0.9s;
 }
 
 .loaded .loader {
-  opacity: 1;
   visibility: hidden;
 }
 
