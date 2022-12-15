@@ -709,14 +709,14 @@
         }), 0);
         const themeButton = document.getElementById("js-theme-button");
         const darkTheme = "dark-theme";
-        const iconTheme = "_icon-medapps";
+        const iconTheme = "_icon-sun";
         const selectedTheme = localStorage.getItem("selected-theme");
         const selectedIcon = localStorage.getItem("selected-icon");
         const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? "dark" : "light";
-        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? "_icon-lightbulb" : "_icon-medapps";
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? "_icon-moon" : "_icon-sun";
         if (selectedTheme) {
             document.body.classList["dark" === selectedTheme ? "add" : "remove"](darkTheme);
-            themeButton.classList["_icon-lightbulb" === selectedIcon ? "add" : "remove"](iconTheme);
+            themeButton.classList["_icon-moon" === selectedIcon ? "add" : "remove"](iconTheme);
         }
         themeButton.addEventListener("click", (() => {
             document.body.classList.toggle(darkTheme);

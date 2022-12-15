@@ -3472,11 +3472,11 @@ video {
     width: 100%;
   }
 
-  .menu__sun._icon-lightbulb:hover {
+  .menu__sun._icon-moon:hover {
     color: var(--hoverColorLink);
   }
 
-  .menu__sun._icon-medapps:hover {
+  .menu__sun._icon-sun:hover {
     color: var(--hoverColorLink);
   }
 
