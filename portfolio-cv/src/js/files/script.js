@@ -122,6 +122,14 @@ if (marqueeContent) {
 	}
 }
 //========================================================================================================================================================
+const goTopBtn = document.querySelector('[data-go-top]');
+window.addEventListener('scroll', function () {
+	if (window.scrollY >= 120) {
 
+		goTopBtn.classList.add('active');
+	} else {
 
+		goTopBtn.classList.remove('active');
+	}
+});
 //========================================================================================================================================================

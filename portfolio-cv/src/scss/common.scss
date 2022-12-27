@@ -564,3 +564,33 @@ video {
 	background-color: hsl(19deg, 8%, 55%);
 }
 //========================================================================================================================================================
+.go-top {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: rem(25);
+	right: rem(25);
+	width: rem(40);
+	height: rem(40);
+	pointer-events: none;
+	transform: translateY(20px);
+	color: var(--mainColor);
+	border: rem(1) solid var(--mainColor);
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.3s, transform 0.3s;
+	z-index: 2;
+	&:before {
+		@extend %ic;
+		content: "\e901";
+		transform: rotate(-90deg);
+		font-size: rem(14);
+	}
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+}
+//========================================================================================================================================================
