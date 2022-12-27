@@ -1,0 +1,208 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+._icon-angle-down:before {
+	content: "\e900";
+}
+._icon-arrow-right:before {
+	content: "\e901";
+}
+._icon-bem:before {
+	content: "\e902";
+}
+._icon-chevron-right:before {
+	content: "\e903";
+}
+._icon-chrome:before {
+	content: "\e904";
+}
+._icon-css3:before {
+	content: "\e905";
+}
+._icon-css3-alt:before {
+	content: "\e906";
+}
+._icon-discord:before {
+	content: "\e907";
+}
+._icon-earlybirds:before {
+	content: "\e908";
+}
+._icon-edge:before {
+	content: "\e909";
+}
+._icon-edge-legacy:before {
+	content: "\e90a";
+}
+._icon-eye:before {
+	content: "\e90b";
+}
+._icon-eye-slash:before {
+	content: "\e90c";
+}
+._icon-facebook:before {
+	content: "\e90d";
+}
+._icon-facebook-f:before {
+	content: "\e90e";
+}
+._icon-facebook-messenger:before {
+	content: "\e90f";
+}
+._icon-figma:before {
+	content: "\e910";
+}
+._icon-folder:before {
+	content: "\e911";
+}
+._icon-folder-open:before {
+	content: "\e912";
+}
+._icon-font-awesome-logo-full:before {
+	content: "\e913";
+}
+._icon-github:before {
+	content: "\e914";
+}
+._icon-github-square:before {
+	content: "\e915";
+}
+._icon-gitkraken:before {
+	content: "\e916";
+}
+._icon-git-square:before {
+	content: "\e917";
+}
+._icon-google:before {
+	content: "\e918";
+}
+._icon-google-drive:before {
+	content: "\e919";
+}
+._icon-greensock:before {
+	content: "\e91a";
+}
+._icon-gulp:before {
+	content: "\e91b";
+}
+._icon-heart:before {
+	content: "\e91c";
+}
+._icon-html5:before {
+	content: "\e91d";
+}
+._icon-instagram:before {
+	content: "\e91e";
+}
+._icon-instagram-square:before {
+	content: "\e91f";
+}
+._icon-js:before {
+	content: "\e920";
+}
+._icon-js-square:before {
+	content: "\e921";
+}
+._icon-keyboard:before {
+	content: "\e922";
+}
+._icon-k-work .path1:before {
+	content: "\e923";
+	color: rgb(17, 17, 17);
+}
+._icon-k-work .path2:before {
+	content: "\e924";
+	margin-left: -3.6669921875em;
+	color: rgb(255, 168, 0);
+}
+._icon-lightbulb:before {
+	content: "\e925";
+}
+._icon-linkedin:before {
+	content: "\e926";
+}
+._icon-linkedin-in:before {
+	content: "\e927";
+}
+._icon-linux:before {
+	content: "\e928";
+}
+._icon-medapps:before {
+	content: "\e929";
+}
+._icon-moon:before {
+	content: "\e92a";
+}
+._icon-node:before {
+	content: "\e92b";
+}
+._icon-npm:before {
+	content: "\e92c";
+}
+._icon-paper-plane:before {
+	content: "\e92d";
+}
+._icon-php:before {
+	content: "\e92e";
+}
+._icon-react:before {
+	content: "\e92f";
+}
+._icon-reacteurope:before {
+	content: "\e930";
+}
+._icon-sass:before {
+	content: "\e931";
+}
+._icon-sun:before {
+	content: "\e932";
+}
+._icon-telegram:before {
+	content: "\e933";
+}
+._icon-telegram-plane:before {
+	content: "\e934";
+}
+._icon-tumblr:before {
+	content: "\e935";
+}
+._icon-twitter:before {
+	content: "\e936";
+}
+._icon-twitter-square:before {
+	content: "\e937";
+}
+._icon-user:before {
+	content: "\e938";
+}
+._icon-viber:before {
+	content: "\e939";
+}
+._icon-webpack:before {
+	content: "\e93a";
+}
+._icon-whatsapp:before {
+	content: "\e93b";
+}
+._icon-whatsapp-square:before {
+	content: "\e93c";
+}
+._icon-youtube:before {
+	content: "\e93d";
+}
+._icon-youtube-square:before {
+	content: "\e93e";
+}

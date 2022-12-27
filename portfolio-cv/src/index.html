@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Artur"
+})
+
+<body id="my-scrollbar">
+
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+
+		<div class="loader">
+			<div class="loader__block">
+				<div class="loader__item"></div>
+				<div class="loader__item"></div>
+				<div class="loader__item"></div>
+			</div>
+		</div>
+
+		<main class="page">
+
+			<section data-fullscreen class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__body">
+
+						<div class="hero__heading heading">
+							<h2 class="heading__label label">
+								<span class="label__pop">П</span>
+								<span class="label__pop">р</span>
+								<span class="label__pop">и</span>
+								<span class="label__pop">в</span>
+								<span class="label__pop">е</span>
+								<span class="label__pop">т</span>
+								<span class="label__pop">!</span>
+								<br>
+								<span class="label__pop label__pop_mr">Я</span>
+
+								<span class="label__pop label__pop_red">А</span>
+								<span class="label__pop label__pop_red">р</span>
+								<span class="label__pop label__pop_red">т</span>
+								<span class="label__pop label__pop_red">у</span>
+								<span class="label__pop label__pop_red">р</span>
+								<span class="label__pop label__pop_red label__pop_mr">,</span>
+								<br>
+								<span class="label__pop">w</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop label__pop_mr">b</span>
+								<span class="label__pop">d</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">v</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">l</span>
+								<span class="label__pop">o</span>
+								<span class="label__pop">p</span>
+								<span class="label__pop">e</span>
+								<span class="label__pop">r</span>
+							</h2>
+							<div class="heading__value">
+								<p class="heading__sub-text">
+									Front End Developer
+								</p>
+							</div>
+						</div>
+
+						<div class="block-btn">
+							<a data-goto=".contacts" class="block-btn__link" href="#">Контакты</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section data-watch="navigator" class="page__about-me about-me">
+				<div class="about-me__container">
+
+					<div class="about-me__title title">
+						<h3 class="title__label">
+							<span class="label__pop">О</span>
+							<span class="label__pop">б</span>
+							<span class="label__pop label__pop_mr">о</span>
+							<span class="label__pop">м</span>
+							<span class="label__pop">н</span>
+							<span class="label__pop">е</span>
+						</h3>
+						<h3 class="title__value"></h3>
+					</div>
+
+					<div class="about-me__body">
+						<div class="about-me__description">
+							<div data-watch class="about-me__heading">
+								<p>
+									Приветствую Вас <br> на своем сайте-портфолио!
+								</p>
+							</div>
+							<div data-watch class="about-me__text">
+								<p>
+									Я Артур, живу в Минске. Занимаюсь HTML-версткой сайтов. Делаю максимально качественную кроссбраузерную, адаптивную и валидную верстку.
+									В процессе работы над проектом для ускорения верстки я использую сборщик Gulp/Webpack.
+									Применяю препроцессор SASS, использую БЭМ. По желанию клиента делаю Pixel Perfect. Люблю использовать чистый Java Script, Flex и Grid.
+									Я не использую устаревшие библиотеки и фреймворки, так как мир технологий не стоит на месте.
+								</p>
+							</div>
+							<div data-watch class="about-me__sub-text">
+								<p>
+									Каждый момент я стараюсь узнать что-то новое в технологиях, изучаю и внедряю в свою работу, улучшая качество кода.
+									Если у Вас есть интерес узнать обо мне подробнее просто <a class="contact-link" href="">свяжитесь</a> со мной.
+								</p>
+							</div>
+						</div>
+
+						<div class="skills-bar">
+
+							<ul class="skills-bar__lists">
+								<li class="skills-bar__list">HTML</li><span class="bar"><span data-watch class="html"></span></span> <!-- skill bar 1 -->
+							</ul>
+
+							<ul class="skills-bar__lists">
+								<li class="skills-bar__list">CSS</li><span class="bar"><span data-watch class="scss"></span></span><!-- skill bar 2 -->
+							</ul>
+
+							<ul class="skills-bar__lists">
+								<li class="skills-bar__list">JAVASCRIPT</li><span class="bar"><span data-watch class="javascript"></span></span><!-- skill bar 3 -->
+							</ul>
+
+							<ul class="skills-bar__lists">
+								<li class="skills-bar__list">Flex Box</li><span class="bar"><span data-watch class="flexbox"></span></span><!-- skill bar 4 -->
+							</ul>
+
+							<ul class="skills-bar__lists">
+								<li class="skills-bar__list">Grid layout</li><span class="bar"><span data-watch class="grid"></span></span><!-- skill bar 5 -->
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section data-watch-threshold="0.1" data-watch="navigator" class="page__skills skills">
+				<div class="skills__container">
+					<div class="skills__title title">
+						<h3 class="title__label">
+							<span class="label__pop">Н</span>
+							<span class="label__pop">а</span>
+							<span class="label__pop">в</span>
+							<span class="label__pop">ы</span>
+							<span class="label__pop">к</span>
+							<span class="label__pop label__pop_mr">и</span>
+							<!--
+							<span class="label__pop label__pop_mr">и</span>
+
+							<span class="label__pop">т</span>
+							<span class="label__pop">е</span>
+							<span class="label__pop">х</span>
+							<span class="label__pop">н</span>
+							<span class="label__pop">о</span>
+							<span class="label__pop">л</span>
+							<span class="label__pop">о</span>
+							<span class="label__pop">г</span>
+							<span class="label__pop">и</span>
+							<span class="label__pop">и</span>-->
+						</h3>
+						<h3 class="title__value"></h3>
+					</div>
+
+					<div data-watch class="skills__marquee marquee">
+						<ul class="marquee__content">
+							<li class="marquee__list _icon-css3"></li>
+							<li class="marquee__list _icon-figma"></li>
+							<li class="marquee__list _icon-github"></li>
+							<li class="marquee__list _icon-gulp"></li>
+							<li class="marquee__list _icon-html5"></li>
+							<li class="marquee__list _icon-js"></li>
+							<li class="marquee__list _icon-npm"></li>
+							<li class="marquee__list _icon-sass"></li>
+							<li class="marquee__list _icon-webpack"></li>
+							<li class="marquee__list _icon-greensock"></li>
+							<li class="marquee__list _icon-bem"></li>
+						</ul>
+					</div>
+
+					<div class="skills__card card">
+						<div data-watch class="card__items card__items_border-red">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-red">HTML5 / CSS3</p>
+								<ul class="card__lists">
+									<li class="card__list">Валидный, кроссбраузерный код</li>
+									<li class="card__list">Семантичная верстка</li>
+									<li class="card__list">Структутированный код</li>
+									<li class="card__list">Анимация, hover-эффекты без JS</li>
+									<li class="card__list">PixelPerfect</li>
+									<li class="card__list">Методология БЭМ</li>
+								</ul>
+							</div>
+						</div>
+
+						<div data-watch class="card__items card__items_border-red">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-red">JavaScript</p>
+								<ul class="card__lists">
+									<li class="card__list">Чистый Javascript код</li>
+									<li class="card__list">Cовременные библиотеки JavaScript</li>
+									<li class="card__list">Комментируемый код</li>
+									<li class="card__list">Чистый и понятный кроссбраузерный код</li>
+								</ul>
+							</div>
+						</div>
+
+						<div data-watch class="card__items card__items_border-yellow">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-yellow">Gulp / Webpack</p>
+								<ul class="card__lists">
+									<li class="card__list">Стартовый шаблон с продуманным кодом для качественной вёрстки</li>
+									<li class="card__list">Автоматизация процесса верстки</li>
+									<li class="card__list">Оптимизированная вёрстка</li>
+									<li class="card__list">Конвертирование форматов png и jpg в современный webp</li>
+									<li class="card__list">Использование современных форматов изображений</li>
+									<li class="card__list">Резиновая вёрстка</li>
+									<li class="card__list">И многое другое</li>
+
+								</ul>
+							</div>
+						</div>
+
+						<div data-watch class="card__items card__items_border-yellow">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-yellow">Figma / Photoshop</p>
+								<ul class="card__lists">
+									<li class="card__list">Нарезка изображений из макета</li>
+									<li class="card__list">Оптимизация изображений для Web</li>
+									<li class="card__list">Экспорт SVG-изображений</li>
+									<li class="card__list">Создание иконочных шрифтов</li>
+								</ul>
+							</div>
+						</div>
+
+						<div data-watch class="card__items card__items_border-blue">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-blue">Less / Sass</p>
+								<ul class="card__lists">
+									<li class="card__list">Ускоренная стилизация сайта</li>
+									<li class="card__list">Более гибкий код</li>
+									<li class="card__list">Улучшенная логика стилей</li>
+									<li class="card__list">Упрощенный синтаксис</li>
+									<li class="card__list">Вложенность селекторов без ошибок</li>
+								</ul>
+							</div>
+						</div>
+
+						<div data-watch class="card__items card__items_border-blue">
+							<div class="card__item">
+								<p class="card__heading card__heading_color-blue">FlexBox / GridLayout</p>
+								<ul class="card__lists">
+									<li class="card__list">Все блоки делаются резиновым</li>
+									<li class="card__list">Элементы могут автоматически выстраиваться</li>
+									<li class="card__list">Возможно построить любую сетку</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section data-watch="navigator" class="page__portfolio portfolio">
+				<div class="portfolio__container">
+					<div class="portfolio__content">
+
+						<div class="portfolio__title title">
+							<h3 class="title__label title__label_red">
+								<span class="label__pop">М</span>
+								<span class="label__pop">о</span>
+								<span class="label__pop label__pop_mr">и</span>
+								<span class="label__pop">р</span>
+								<span class="label__pop">а</span>
+								<span class="label__pop">б</span>
+								<span class="label__pop">о</span>
+								<span class="label__pop">т</span>
+								<span class="label__pop">ы</span>
+							</h3>
+						</div>
+
+						<div class="portfolio__block">
+							<div data-watch class="portfolio__description">
+								<p>
+									Небольшая галерея последних выбранных мной проектов.
+									Это всего лишь капля в море по сравнению со всем списком.
+									Хотите увидеть больше?
+									Посетите мое <a class="portfolio-link" href="portfolio.html" target="_blank">портфолио</a>.
+								</p>
+							</div>
+							<div class="portfolio__page block-btn">
+								<a class="block-btn__link" href="portfolio.html" target="_blank">Все работы</a>
+							</div>
+						</div>
+
+						<div class="portfolio__items">
+
+							<div class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/createx-preview.png" alt="createx corporate website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Greatex</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/create/create-app/" target="_blank"></a>
+								</figure>
+							</div>
+
+							<div class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/online-zoo-preview.png" alt="online zoo magazine website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Online Zoo</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://rolling-scopes-school.github.io/prisonbreak8-JSFE2022Q3/online-zoo/" target="_blank"></a>
+								</figure>
+							</div>
+
+							<div class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/sushi-landing-preview.png" alt="sushi landing website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Sushi</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/sushi/" target="_blank"></a>
+								</figure>
+							</div>
+
+							<div data-watch class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/landing-portfolio-preview.png" alt="portfolio landing website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Landing</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/portfolio/" target="_blank"></a>
+								</figure>
+							</div>
+
+							<div data-watch class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/perfume-preview.png" alt="perfume landing website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Perfume</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/perfume/" target="_blank"></a>
+								</figure>
+							</div>
+
+							<div data-watch class="portfolio__item portfolio__item_animation">
+								<figure class="portfolio-card">
+									<img class="portfolio-card__picture" src="@img/my-works/car-website-preview.png" alt="car website landing website">
+									<figcaption class="portfolio-card__figcaption">
+										<h3 class="portfolio-card__description">Car website</h3>
+										<h5 class="portfolio-card__sub-description">Design</h5>
+									</figcaption>
+									<a class="portfolio-card__link-work" href="https://prisonbreak8.github.io/car_website/" target="_blank"></a>
+								</figure>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section data-watch="navigator" class="page__contacts contacts">
+
+				<video class="video-slide" src="files/earth2.mp4" autoplay muted loop>
+				</video>
+
+				<div class="contacts__container">
+					<div class="contacts__title title">
+						<h3 class="title__label">
+							<span class="label__pop">К</span>
+							<span class="label__pop">о</span>
+							<span class="label__pop">н</span>
+							<span class="label__pop">т</span>
+							<span class="label__pop">а</span>
+							<span class="label__pop">к</span>
+
+							<span class="label__pop">т</span>
+							<span class="label__pop">ы</span>
+						</h3>
+					</div>
+
+					<div class="contacts__items">
+						<div class="contacts__description">
+							<p>
+								У Вас остались вопросы? Появился интерес? Желаете уточнить нюансы?
+							</p>
+							<p>
+								Вы всегда можете связаться со мною с помощью следущих вариантов.
+							</p>
+						</div>
+
+						<div class="contacts__item">
+							<ul class="contacts__lists">
+								<li class="contacts__list"><a class="contacts__link _icon-telegram" href="https://t.me/ArturGolubiev" target="_blank"></a></li>
+								<li class="contacts__list"><a class="contacts__link _icon-linkedin" href="https://www.linkedin.com/in/artur-holubev-882491231/" target="_blank"></a></li>
+								<li class="contacts__list"><a class="contacts__link _icon-viber" href="viber://chat?number=+375293988681" target="_blank"></a></li>
+								<li class="contacts__list"><a class="contacts__link _icon-discord" href="https://discordapp.com/users/895022733736443905/" target="_blank"></a></li>
+							</ul>
+						</div>
+
+						<div class="contacts__description">
+							<p>
+								Мои социальные сети:
+							</p>
+						</div>
+
+						<div class="contacts__item">
+							<ul class="contacts__lists">
+								<li class="contacts__list"><a class="contacts__link _icon-facebook" href="https://www.facebook.com/profile.php?id=100044944034350" target="_blank"></a></li>
+								<li class="contacts__list"><a class="contacts__link _icon-github" href="https://github.com/PrisonBreak8" target="_blank"></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="contacts__kwork">
+						<div class="contacts__kwork-description">
+							<p>А так же связаться со мною можно через биржу</p>
+						</div>
+
+						<a class="contacts__kwork-link" href="https://kwork.ru/user/prisonbreak8" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="110" height="30" fill="none" fill-rule="evenodd">
+								<path class="svg-logo"
+									d="M19.158 21.912l-8.543-10.595 8.012-9.368H13.32L1.9 16.188v5.723h4.297V15.78l1.575-1.857 6.095 7.99h5.3zm22.907 0L47.8 1.932h-4.828l-3.5 14.427-3.8-14.427h-3.356L28.472 16.36 24.928 1.932h-4.81l5.77 19.963h4.554l3.5-13.712 3.527 13.712h4.588v.017zm16.95.358c6.095 0 10.546-4.31 10.546-10.322s-4.434-10.34-10.546-10.34c-6.078 0-10.512 4.31-10.512 10.322s4.434 10.34 10.512 10.34zm0-3.78c-3.715 0-6.095-2.845-6.095-6.558 0-3.747 2.38-6.558 6.095-6.558s6.13 2.8 6.13 6.558c0 3.713-2.414 6.558-6.13 6.558zm30.132 3.424L84.6 14.315c2.174-.51 4.417-2.402 4.417-5.928 0-3.713-2.568-6.44-6.763-6.44H72.83v19.963h4.297V14.81h3.15l3.955 7.103h4.914zm-7.533-10.85H77.11V5.68h4.503c1.73 0 3.013 1.022 3.013 2.69.017 1.686-1.284 2.69-3.013 2.69zM110 21.912l-8.56-10.595 8.012-9.368h-5.3l-7.122 8.925V1.932h-4.297v19.963h4.297v-6.132l1.575-1.857 6.095 7.99h5.3v.017z"
+									fill="#fcfdff"></path>
+								<path d="M6.198 6.087L1.9 11.283V4.435H0v-2.59h6.198v4.24z" fill="#ffa800"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		@@include('html/_footer.htm',{})
+
+		<a data-goto=".header" data-go-top class="go-top" href="#" title="Go to Top"></a>
+
+
+
+	</div>
+
+	@@include('html/_popup.htm',{})
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>-->
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

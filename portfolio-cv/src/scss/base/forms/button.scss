@@ -1,0 +1,102 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-block;
+	padding: rem(10) rem(22);
+	font-size: rem(22);
+	font-weight: 500;
+	color: var(--mainColor);
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
+.button-3d {
+	position: relative;
+	overflow: hidden;
+	background: var(--backgroundGradientButton);
+	border-radius: rem(10);
+	transform: perspective(500px) rotateY(-15deg);
+
+	transition: 0.5s;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: perspective(500px) rotateY(15deg);
+			box-shadow: var(--shadowButtonHover);
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, #fcfaf1, transparent);
+		transition: 0.5s;
+	}
+	@media (any-hover: hover) {
+		&:hover::before {
+			left: 100%;
+		}
+	}
+}
+//========================================================================================================================================================
+.block-btn {
+	// .block-btn__link
+	&__link {
+		position: relative;
+		font-size: rem(18);
+		z-index: 10;
+		padding: rem(15) rem(55);
+		letter-spacing: 4px;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--hoverColorLink);
+				box-shadow: 0 0 rem(50) var(--hoverColorLink);
+				transition-delay: 0.4s;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(25);
+			height: rem(25);
+			transition: width 0.4s, height 0.4s;
+			transition-delay: 0.4s;
+		}
+		&::before {
+			top: 0;
+			left: 0;
+			border-top: 2px solid var(--hoverColorLink);
+			border-left: 2px solid var(--hoverColorLink);
+		}
+		&::after {
+			bottom: 0;
+			right: 0;
+			border-bottom: 2px solid var(--hoverColorLink);
+			border-right: 2px solid var(--hoverColorLink);
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+	}
+}
+//========================================================================================================================================================

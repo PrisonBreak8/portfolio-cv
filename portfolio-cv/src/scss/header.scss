@@ -1,0 +1,293 @@
+//====================================================================================================
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	min-width: rem(320);
+	padding: rem(15) 0;
+	background-color: var(--bgColorHeaderDark);
+	z-index: $zIndexHeader;
+	&._header-scroll {
+		position: fixed;
+		top: -20%;
+		background-color: var(--bgColorHeaderDarkFixed);
+	}
+	&._header-show {
+		transition: top 0.3s ease 0s;
+		top: 0;
+	}
+	// .header__container
+	&__container {
+	}
+	// .header__menu
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(40);
+		min-height: rem(40);
+	}
+}
+.menu {
+	// .menu__logo
+	&__logo {
+		position: relative;
+		font-size: rem(24);
+		z-index: 10;
+		font-weight: 700;
+		padding: rem(8) rem(12);
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--hoverColorLink);
+				box-shadow: 0 0 rem(50) var(--hoverColorLink);
+				transition-delay: 0.4s;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(15);
+			height: rem(15);
+			transition: width 0.4s, height 0.4s;
+			transition-delay: 0.4s;
+		}
+
+		&::before {
+			top: 0;
+			left: 0;
+			border-top: 2px solid var(--hoverColorLink);
+			border-left: 2px solid var(--hoverColorLink);
+		}
+		&::after {
+			bottom: 0;
+			right: 0;
+			border-bottom: 2px solid var(--hoverColorLink);
+			border-right: 2px solid var(--hoverColorLink);
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+				transition-delay: 0s;
+			}
+		}
+	}
+
+	// .menu__items
+	&__items {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 50, 30, 0, 1170, 991);
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $mobile) {
+			position: fixed;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: -120%;
+			@include adaptiveValue("padding-top", 180, 110);
+			padding-bottom: rem(25);
+			padding-right: rem(25);
+			padding-left: rem(25);
+			background-color: var(--bgColorDark); // беграунд всего бургер меню
+			transition: right 0.3s ease-in;
+			&::before {
+				content: ""; // Плашка под которой будет меню проезжать
+				position: fixed;
+				top: 0;
+				right: -120%;
+				width: 100%;
+				height: rem(76);
+				background-color: var(--bgColorHeaderDark);
+				transition: right 0.3s ease-in;
+				z-index: 10;
+			}
+			.menu-open & {
+				right: 0;
+				&::before {
+					content: "";
+					right: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		@media (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: rem(30);
+		}
+
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			@include adaptiveValue("column-gap", 60, 25, 0, 1170, 767);
+			row-gap: rem(10);
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		position: relative;
+		font-weight: 600;
+		padding-bottom: rem(2);
+		transition: color 0.2s ease-in;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 2.5px;
+			bottom: -2.5px;
+			left: 0;
+			border-bottom: 2.5px solid var(--hoverColorLink);
+			transition: width 0.2s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hoverColorLink);
+			}
+			&:hover::before {
+				width: 100%;
+			}
+		}
+		@include adaptiveValue("font-size", 18, 16, 0, 1170, 991);
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&._navigator-active {
+			color: var(--hoverColorLink);
+		}
+	}
+	// .menu__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+	}
+
+	// .menu__sun
+	&__sun {
+		position: relative;
+		z-index: 10;
+		font-size: rem(28);
+		border-radius: 50%;
+		height: rem(30);
+		width: rem(30);
+		box-shadow: 0 0 0 0 rgba(250, 255, 17, 1);
+		animation: pulse-white 2s infinite;
+		transition: color 0.3s ease;
+		@media (max-width: $mobile) {
+			margin-right: 30px;
+		}
+
+		&._icon-moon {
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--hoverColorLink);
+				}
+			}
+		}
+
+		&._icon-sun {
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--hoverColorLink);
+				}
+			}
+		}
+		@keyframes pulse-white {
+			0% {
+				box-shadow: 0 0 0 0 rgba(250, 255, 17, 0.7);
+			}
+
+			70% {
+				box-shadow: 0 0 0 10px rgba(250, 255, 17, 0);
+			}
+
+			100% {
+				box-shadow: 0 0 0 0 rgba(250, 255, 17, 0);
+			}
+		}
+	}
+	// .menu__burger
+	&__burger {
+	}
+	// .menu__icon
+	&__icon {
+	}
+}
+.icon-menu {
+}
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		flex: 0 0 auto;
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.2s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: var(--mainColor);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
